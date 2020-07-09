@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-07-09T14:33:58.074Z</updated>
+    <title>yeswhos</title>
+    <updated>2020-07-09T14:34:57.627Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, yeswhos</rights>
     <entry>
         <title type="html"><![CDATA[测试]]></title>
         <id>https://yeswhos.github.io/post/ce-shi/</id>
