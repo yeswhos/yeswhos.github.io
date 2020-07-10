@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-10T10:36:38.060Z</updated>
+    <updated>2020-07-10T10:46:41.032Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
+    <entry>
+        <title type="html"><![CDATA[启发式算法 Heuristic]]></title>
+        <id>https://yeswhos.github.io/post/qi-fa-shi-suan-fa-heuristic/</id>
+        <link href="https://yeswhos.github.io/post/qi-fa-shi-suan-fa-heuristic/">
+        </link>
+        <updated>2020-07-10T03:43:12.000Z</updated>
+        <content type="html"><![CDATA[<p>启发式算法是相对于最优算法而提出的。一个基于直观经验所构造的算法，在可接受的时间和空间消耗的情况下，给出待解决问题的可行解。<br>
+主要有：</p>
+<ol>
+<li>模拟退火算法</li>
+<li>蚁群算法</li>
+<li>遗传算法</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[NFL 没有免费午餐]]></title>
         <id>https://yeswhos.github.io/post/nfl-mei-you-mian-fei-wu-can/</id>
