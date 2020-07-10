@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-10T09:09:05.658Z</updated>
+    <updated>2020-07-10T09:39:51.268Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -15,12 +15,14 @@
         <id>https://yeswhos.github.io/post/ce-shi/</id>
         <link href="https://yeswhos.github.io/post/ce-shi/">
         </link>
-        <updated>2020-07-09T00:23:08.000Z</updated>
+        <updated>2020-07-08T17:23:08.000Z</updated>
         <summary type="html"><![CDATA[<p>前置概念：</p>
 <ol>
 <li>多项式 polynomial：<img src="https://yeswhos.github.io/post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
 <li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
 比如冒泡排序时间复杂度为O(n ** 2)，取最高次，是一个时间复杂度为多项式的表达方式。</li>
+<li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
+<li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
 </ol>
 ]]></summary>
         <content type="html"><![CDATA[<p>前置概念：</p>
@@ -28,11 +30,26 @@
 <li>多项式 polynomial：<img src="https://yeswhos.github.io/post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
 <li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
 比如冒泡排序时间复杂度为O(n ** 2)，取最高次，是一个时间复杂度为多项式的表达方式。</li>
+<li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
+<li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
 </ol>
 <!-- more -->
 <p>正文：</p>
 <ol>
-<li>P问题：</li>
+<li>P问题：存在多项式时间算法的方式，也就是该问题可以用多项式算法计算，然后得到结果的问题。</li>
+<li>NP问题 Nondeterministic polynomial：非确定多项式问题。能在多项式时间内验证得出一个正确解的问题。<br>
+换种说法就是，有一个问题，假设你得到了问题的解，要验证是否正确。验证的是验证花费的时间是多项式时间，至于求解所花的时间是不是多项式无所谓，可能有多项式，可能没有，也可能不知道。<br>
+P问题是NP问题的子集，即存在多项式时间算法的问题，总能在多项式时间内验证他。<br>
+NP问题，不知道这个问题是否存在多项式时间解，但可以在多项式时间内来验证并得到这个问题得一个正确解。</li>
+<li>NPC问题 Nondeterministic polynomial complete：存在一个NP问题，所有NP问题都可以约化成他，也就是只要解决了这个问题，所有的NP问题也就解决了。定义满足两个条件：该问题是NP问题；所有NP问题都可以约化成该问题。</li>
+<li>NP-Hard问题： 所有NP都可以约化成它，（在多项式时间内）但它不一定是一个NP问题。NP-Hard范围比NPC还要广。</li>
+<li>TSP问题 Travel Salesman Problem：一个推销员，要到n个城市推销商品，要找出包括n个城市的环路。用枚举的方法来说，这个路线有(n - 1)!种，为阶乘算法。所以是NP问题。因为给出一个任意的路径，能够得到该路径的开销，但是求解对比所有可能的旅行路径是不知道存不存在一个多项式解，所以再一次为NP问题。</li>
+</ol>
+<p>Reference：</p>
+<ol>
+<li>https://zhuanlan.zhihu.com/p/70305881</li>
+<li>https://blog.csdn.net/bitcarmanlee/article/details/51935400</li>
+<li>https://zhuanlan.zhihu.com/p/73953567</li>
 </ol>
 ]]></content>
     </entry>
