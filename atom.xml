@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-10T16:50:36.286Z</updated>
+    <updated>2020-07-10T17:04:28.952Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -15,8 +15,11 @@
         <id>https://yeswhos.github.io/post/shun-xu-biao/</id>
         <link href="https://yeswhos.github.io/post/shun-xu-biao/">
         </link>
-        <updated>2020-07-10T02:45:06.000Z</updated>
+        <updated>2020-07-09T19:45:06.000Z</updated>
+        <summary type="html"><![CDATA[<p>顺序表是在计算机内存中以数组的形式保存的线性表，线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的各个元素、使得线性表中在逻辑结构上相邻的数据元素存储在相邻的物理存储单元中。</p>
+]]></summary>
         <content type="html"><![CDATA[<p>顺序表是在计算机内存中以数组的形式保存的线性表，线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的各个元素、使得线性表中在逻辑结构上相邻的数据元素存储在相邻的物理存储单元中。</p>
+<!-- more -->
 <p>32位系统中，char类型8位（bit）1字节（byte），int类型32位（bit）4字节（byte）。<br>
 整形存储方式如下图：<br>
 <img src="https://yeswhos.github.io/post-images/1594374644588.jpg" alt="" loading="lazy"></p>
@@ -42,9 +45,12 @@
         <id>https://yeswhos.github.io/post/qi-fa-shi-suan-fa-heuristic/</id>
         <link href="https://yeswhos.github.io/post/qi-fa-shi-suan-fa-heuristic/">
         </link>
-        <updated>2020-07-09T20:43:12.000Z</updated>
-        <content type="html"><![CDATA[<p>启发式算法是相对于最优算法而提出的。一个基于直观经验所构造的算法，在可接受的时间和空间消耗的情况下，给出待解决问题的可行解。<br>
-主要有：</p>
+        <updated>2020-07-09T13:43:12.000Z</updated>
+        <summary type="html"><![CDATA[<p>启发式算法是相对于最优算法而提出的。一个基于直观经验所构造的算法，在可接受的时间和空间消耗的情况下，给出待解决问题的可行解。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>启发式算法是相对于最优算法而提出的。一个基于直观经验所构造的算法，在可接受的时间和空间消耗的情况下，给出待解决问题的可行解。</p>
+<!-- more -->
+<p>主要有：</p>
 <ol>
 <li>模拟退火算法</li>
 <li>蚁群算法</li>
@@ -57,8 +63,12 @@
         <id>https://yeswhos.github.io/post/nfl-mei-you-mian-fei-wu-can/</id>
         <link href="https://yeswhos.github.io/post/nfl-mei-you-mian-fei-wu-can/">
         </link>
-        <updated>2020-07-09T20:15:53.000Z</updated>
-        <content type="html"><![CDATA[<p>前提：所有问题的出现机会相同，或者所有问题同等重要。<br>
+        <updated>2020-07-09T13:15:53.000Z</updated>
+        <summary type="html"><![CDATA[<p>脱离具体问题，空谈“什么学习算法更好”毫无意义。若考虑所有潜在的问题，则所有的学习算法都一样好。要谈论算法问题得相对优劣，必须要针对所有潜在的问题。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>脱离具体问题，空谈“什么学习算法更好”毫无意义。若考虑所有潜在的问题，则所有的学习算法都一样好。要谈论算法问题得相对优劣，必须要针对所有潜在的问题。</p>
+<!-- more -->
+<p>前提：所有问题的出现机会相同，或者所有问题同等重要。<br>
 定义：若学习算法La在某些问题比Lb好，那就会存在另外一些问题，La比Lb差。也就是：对于不同的问题，不同的学习算法的泛化能力不同。<br>
 （泛化能力指算法对于新样本的适应能力。学习的目的是学到隐含数据背后的规律，对于同一规律的学习集之外的数据，经过训练的网络也能给出合适的输出。）<br>
 <img src="https://yeswhos.github.io/post-images/1594377154685.jpg" alt="" loading="lazy"><br>
@@ -76,17 +86,12 @@
         <id>https://yeswhos.github.io/post/ce-shi/</id>
         <link href="https://yeswhos.github.io/post/ce-shi/">
         </link>
-        <updated>2020-07-08T10:23:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>前置概念：</p>
-<ol>
-<li>多项式 polynomial：<img src="https://yeswhos.github.io/post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
-<li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
-比如冒泡排序时间复杂度为O(n ** 2)，取最高次，是一个时间复杂度为多项式的表达方式。</li>
-<li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
-<li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
-</ol>
+        <updated>2020-07-08T03:23:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>算法中常见的多项式以及非确定多项式等问题概念。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>前置概念：</p>
+        <content type="html"><![CDATA[<p>算法中常见的多项式以及非确定多项式等问题概念。</p>
+<!-- more -->
+<p>前置概念：</p>
 <ol>
 <li>多项式 polynomial：<img src="https://yeswhos.github.io/post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
 <li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
@@ -94,7 +99,6 @@
 <li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
 <li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
 </ol>
-<!-- more -->
 <p>正文：</p>
 <ol>
 <li>P问题：存在多项式时间算法的方式，也就是该问题可以用多项式算法计算，然后得到结果的问题。</li>

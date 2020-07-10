@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1594399831938">
+<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1594400665926">
 <link rel="stylesheet" href="https://yeswhos.github.io/styles/main.css">
 
 
@@ -18,11 +18,13 @@
 
 
 
-    <meta name="description" content="前置概念：
+    <meta name="description" content="算法中常见的多项式以及非确定多项式等问题概念。
+
+前置概念：
 
 多项式 polynomial： ，这种形式的为X的最高位为n的多项式。
 时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。
-比如冒泡排序时间复杂度为O(n ** 2)，取最高次，是一个时间复杂度为多项式的表达方式。..." />
+比如冒泡排序时间复杂度为O(n ** 2..." />
     <meta name="keywords" content="算法/AI基础" />
   </head>
   <body>
@@ -32,7 +34,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://yeswhos.github.io">
-        <img src="https://yeswhos.github.io/images/avatar.png?v=1594399831938" class="site-logo">
+        <img src="https://yeswhos.github.io/images/avatar.png?v=1594400665926" class="site-logo">
         <h1 class="site-title">yeswhos</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,7 +100,9 @@
             <div class="post-date">2020-07-08</div>
             
             <div class="post-content" v-pre>
-              <p>前置概念：</p>
+              <p>算法中常见的多项式以及非确定多项式等问题概念。</p>
+<!-- more -->
+<p>前置概念：</p>
 <ol>
 <li>多项式 polynomial：<img src="https://yeswhos.github.io/post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
 <li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
@@ -106,7 +110,6 @@
 <li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
 <li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
 </ol>
-<!-- more -->
 <p>正文：</p>
 <ol>
 <li>P问题：存在多项式时间算法的方式，也就是该问题可以用多项式算法计算，然后得到结果的问题。</li>
