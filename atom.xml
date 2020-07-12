@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-12T10:46:18.858Z</updated>
+    <updated>2020-07-12T10:55:23.098Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
+    <entry>
+        <title type="html"><![CDATA[中文房间 Chinese Room]]></title>
+        <id>https://yeswhos.github.io/post/zhong-wen-fang-jian-chinese-room/</id>
+        <link href="https://yeswhos.github.io/post/zhong-wen-fang-jian-chinese-room/">
+        </link>
+        <updated>2020-07-12T03:47:38.000Z</updated>
+        <summary type="html"><![CDATA[<p>Chinese Room是人工智能领域重要的 假象实验</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>Chinese Room是人工智能领域重要的 假象实验</p>
+<!-- more -->
+<p>在这个实验中，Searle假定自己在一个room中，假设自己就是一个计算机，可以通过执行一些程序和规则来将自己模拟成一个中国人。屋子外面的人将中文写在便条上从门缝下塞进来。对Searle来说他本人不懂得中文，但却可以给屋子外面的人一个看上去合理/只能的回复。<br>
+被编成的计算机虽然表现得有思维，并其实它并不能有思维，理解力或者是认知能力。程序不是思维的本身也不是必须。<br>
+举个利兹，Alpha Go也并不知道他在下棋，只是执行程序罢了。</p>
+<p>不过对于目前的AI学习，好像并没有什么用。</p>
+<p>Reference:</p>
+<ol>
+<li>https://blog.csdn.net/pennyliang/article/details/5864606</li>
+<li>https://baike.baidu.com/item/%E4%B8%AD%E6%96%87%E6%88%BF%E9%97%B4/3581768</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[时间复杂度]]></title>
         <id>https://yeswhos.github.io/post/shi-jian-fu-za-du/</id>
