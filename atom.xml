@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-12T10:00:12.061Z</updated>
+    <updated>2020-07-12T10:29:55.025Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -15,7 +15,7 @@
         <id>https://yeswhos.github.io/post/shi-jian-fu-za-du/</id>
         <link href="https://yeswhos.github.io/post/shi-jian-fu-za-du/">
         </link>
-        <updated>2020-07-12T02:33:12.000Z</updated>
+        <updated>2020-07-11T19:33:12.000Z</updated>
         <summary type="html"><![CDATA[<p>算法在解决问题时候会消耗资源和时间，而这也是衡量算法优劣的指标，也就是从时间和空间两个方面考量。下面只讲时间复杂度，是指当前算法所消耗的时间。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>算法在解决问题时候会消耗资源和时间，而这也是衡量算法优劣的指标，也就是从时间和空间两个方面考量。下面只讲时间复杂度，是指当前算法所消耗的时间。</p>
@@ -35,7 +35,8 @@
 <li>判断算法效率时，往往只关注操作量最高的次数，其他次要项以及常数项可以忽略</li>
 <li>算法时间复杂度一般都指最坏时间复杂度。</li>
 </ol>
-<figure data-type="image" tabindex="1"><img src="https://yeswhos.github.io/post-images/1594547958613.jpg" alt="" loading="lazy"></figure>
+<p><img src="https://yeswhos.github.io/post-images/1594547958613.jpg" alt="" loading="lazy"><br>
+<img src="https://yeswhos.github.io/post-images/1594549787993.jpg" alt="" loading="lazy"></p>
 <p>Reference:</p>
 <ol>
 <li>https://www.bilibili.com/video/BV1fW411u7zU?p=4</li>
