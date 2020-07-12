@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-12T10:29:55.025Z</updated>
+    <updated>2020-07-12T10:46:18.858Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -41,6 +41,26 @@
 <ol>
 <li>https://www.bilibili.com/video/BV1fW411u7zU?p=4</li>
 <li>https://zhuanlan.zhihu.com/p/50479555</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[奥卡姆剃刀 Occam's razor]]></title>
+        <id>https://yeswhos.github.io/post/ao-qia-mu-ti-dao-occams-razor/</id>
+        <link href="https://yeswhos.github.io/post/ao-qia-mu-ti-dao-occams-razor/">
+        </link>
+        <updated>2020-07-11T13:38:58.000Z</updated>
+        <summary type="html"><![CDATA[<p>奥卡姆剃刀由14世纪逻辑学家奥卡姆提出，一个解决问题的法则。“切勿浪费较多的东西，去做用较少的东西，同样可以做好的事情”。“如无需要，勿增实体”。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>奥卡姆剃刀由14世纪逻辑学家奥卡姆提出，一个解决问题的法则。“切勿浪费较多的东西，去做用较少的东西，同样可以做好的事情”。“如无需要，勿增实体”。</p>
+<!-- more -->
+<p>在比较不同算法性能的时候，用奥卡姆思想就是越简单越好。比如下图中我们以及机器都更倾向于左边的算法的拟合方式。<br>
+<img src="https://yeswhos.github.io/post-images/1594550764202.jpg" alt="" loading="lazy"><br>
+Reference:</p>
+<ol>
+<li>西瓜书</li>
+<li>https://imlogm.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/occam-razor-NFL/</li>
+<li>https://zhuanlan.zhihu.com/p/42928992</li>
 </ol>
 ]]></content>
     </entry>
