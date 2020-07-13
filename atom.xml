@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-13T07:15:16.957Z</updated>
+    <updated>2020-07-13T09:30:35.905Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -41,6 +41,82 @@
 </ol>
 <p>Reference:<br>
 https://www.bilibili.com/video/BV18W411T7Vv?p=4</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[模型评估方法]]></title>
+        <id>https://yeswhos.github.io/post/mo-xing-ping-gu-fang-fa/</id>
+        <link href="https://yeswhos.github.io/post/mo-xing-ping-gu-fang-fa/">
+        </link>
+        <updated>2020-07-12T18:28:28.000Z</updated>
+        <summary type="html"><![CDATA[<p>对于模型选择问题，理想的解决方案是对候选模型的泛化误差进行评估，然后选择泛化误差最小的模型。但无法直接获得泛化误差，训练误差又由于过拟合现象不适合作为标准。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>对于模型选择问题，理想的解决方案是对候选模型的泛化误差进行评估，然后选择泛化误差最小的模型。但无法直接获得泛化误差，训练误差又由于过拟合现象不适合作为标准。</p>
+<!-- more -->
+<p>通常选择模型是通过实验测试来对学习器的泛化误差进行评估进而做出选择。为此，需要一个与训练集不同的测试集来测试学习器对新样本的判别能力，然后用测试误差来作为泛化误差的近似。<br>
+然而只有一个包含m个样例的数据集。要训练和测试集，如何分配，有下面三种方法。</p>
+<ol>
+<li>
+<p>留出法 hold-out<br>
+直接将数据集划分为两个互斥的集合，然后测试集对泛化误差进行估计。常见的做法是将大约2/3-4/5的样本用于训练，剩余样本进行测试。<br>
+留一法使用的训练集与初始数据集相比只少了一个样本，所以评估模型与期望评估用的训练集训练的模型很相似，所以留一法的评估往往比较准确。<br>
+但是数据集较大的时候，训练m个模型的计算也是很大的。同样NFL定理也适用。</p>
+</li>
+<li>
+<p>交叉验证法 cross validation<br>
+将数据集划分为k个大小相似的互斥子集，每个子集尽可能保持数据分布的一致性，即从数据集分层采样得到。然后每次用k - 1个子集的并集作为训练集，每个子集的一个作为测试集，从而进行k次训练。<br>
+一般这种验证方法也成为k折交叉验证 k-fold cross validation。<br>
+<img src="https://yeswhos.github.io/post-images/1594630480396.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>自助法 bootstrapping<br>
+适用于样本较少的情况，基本思想就是重复采样。<br>
+比如我们有m个样本（m较小），每次在这m个样本中随机采集一个样本，放入训练集，采样完后把样本放回。这样重复采集m次，我们得到m个样本组成的训练集。当然，这m个样本中很有可能有重复的样本数据。同时，用原始的m个样本做测试集。这样接着进行交叉验证。由于我们的训练集有重复数据，这会改变数据的分布，因而训练结果会有估计偏差，因此，此种方法不是很常用，除非数据量真的很少，比如小于20个。</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ol>
+<li>西瓜书</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[性能度量 performance measure]]></title>
+        <id>https://yeswhos.github.io/post/xing-neng-du-liang-performance-measure/</id>
+        <link href="https://yeswhos.github.io/post/xing-neng-du-liang-performance-measure/">
+        </link>
+        <updated>2020-07-12T12:09:27.000Z</updated>
+        <summary type="html"><![CDATA[<p>对学习器的泛化性能进行评估，不仅需要有有效可行的实验估计方法，还需要有衡量模型泛化能力的评价标准。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>对学习器的泛化性能进行评估，不仅需要有有效可行的实验估计方法，还需要有衡量模型泛化能力的评价标准。</p>
+<!-- more -->
+<p>回归任务最常用的度量性能为均方误差 mean squared error</p>
+<p>错误率和精度，是分类任务中最常用的两种性能度量，即适用于二分类任务，也适用于多任务分类任务。<br>
+错误率是分类错误的样本占样本总数的比例，精度则是分类正确的样本数占样本总数的比例。</p>
+<p>查准率precision与查全率recall也是一种性能度量方式。<br>
+对于二分类问题，可将样例根据其真是类别与学习器预测类别的组合划分为下面几种。<br>
+TP：正确地标记为正，即算法预测它为好西瓜，这个西瓜真实情况也是好西瓜（双重肯定是肯定）；<br>
+FP：错误地标记为正，即算法预测它是好西瓜，但这个西瓜真实情况是坏西瓜；<br>
+FN：错误地标记为负，即算法预测为坏西瓜，（F算法预测的不对）但这个西瓜真实情况是好西瓜（双重否定也是肯定）；<br>
+TN：正确地标记为负，即算法标记为坏西瓜，（T算法预测的正确）这个西瓜真实情况是坏西瓜。</p>
+<figure data-type="image" tabindex="1"><img src="https://yeswhos.github.io/post-images/1594631894689.png" alt="" loading="lazy"></figure>
+<p>查准率和查全率往往是相互矛盾的度量。例如，希望好瓜尽可能多的选出来，则可通过增加选瓜的数量来实现。如果将所有的西瓜都选上，那么所有的好瓜也就选上了。而相反，如果希望好瓜比例尽量高，只挑选最有把握的瓜，就会漏掉不少好瓜。<br>
+以查准率，查全率为轴，可以得到P-R曲线。如图：<br>
+<img src="https://yeswhos.github.io/post-images/1594632240156.jpg" alt="" loading="lazy"><br>
+如果一个学习器的P-R曲线被另一个学习器的曲线抱住，就可以说后者的性能要优于前者。<br>
+还有一些基于P-R图的性能度量：</p>
+<ol>
+<li>平衡点 Break-Even Point：查准率=查全率，越高的性能越好。</li>
+<li>F1度量，更常用，越大的性能越好。<br>
+<img src="https://yeswhos.github.io/post-images/1594632460074.png" alt="" loading="lazy"></li>
+<li>实际应用中根据不同的需要也会考虑更偏向于P还是R，比如逃犯信息检索系统中，更希望尽量少的漏掉逃犯，此时的查全率比较重要。体现在F1上面就是这样：<br>
+<img src="https://yeswhos.github.io/post-images/1594632535266.png" alt="" loading="lazy"></li>
+</ol>
+<p>Reference:</p>
+<ol>
+<li>西瓜书</li>
+<li>https://blog.csdn.net/qq_27871973/article/details/81065074</li>
+</ol>
 ]]></content>
     </entry>
     <entry>
@@ -205,75 +281,6 @@ Reference:</p>
 <ol>
 <li>西瓜书</li>
 </ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[P，NP，NP-Hard，NPC问题]]></title>
-        <id>https://yeswhos.github.io/post/ce-shi/</id>
-        <link href="https://yeswhos.github.io/post/ce-shi/">
-        </link>
-        <updated>2020-07-08T03:23:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>算法中常见的多项式以及非确定多项式等问题概念。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>算法中常见的多项式以及非确定多项式等问题概念。</p>
-<!-- more -->
-<p>前置概念：</p>
-<ol>
-<li>多项式 polynomial：<img src="https://yeswhos.github.io/post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
-<li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
-比如冒泡排序时间复杂度为O(n ** 2)，取最高次，是一个时间复杂度为多项式的表达方式。</li>
-<li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
-<li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
-</ol>
-<p>正文：</p>
-<ol>
-<li>P问题：存在多项式时间算法的方式，也就是该问题可以用多项式算法计算，然后得到结果的问题。</li>
-<li>NP问题 Nondeterministic polynomial：非确定多项式问题。能在多项式时间内验证得出一个正确解的问题。<br>
-换种说法就是，有一个问题，假设你得到了问题的解，要验证是否正确。验证的是验证花费的时间是多项式时间，至于求解所花的时间是不是多项式无所谓，可能有多项式，可能没有，也可能不知道。<br>
-P问题是NP问题的子集，即存在多项式时间算法的问题，总能在多项式时间内验证他。<br>
-NP问题，不知道这个问题是否存在多项式时间解，但可以在多项式时间内来验证并得到这个问题得一个正确解。</li>
-<li>NPC问题 Nondeterministic polynomial complete：存在一个NP问题，所有NP问题都可以约化成他，也就是只要解决了这个问题，所有的NP问题也就解决了。定义满足两个条件：该问题是NP问题；所有NP问题都可以约化成该问题。</li>
-<li>NP-Hard问题： 所有NP都可以约化成它，（在多项式时间内）但它不一定是一个NP问题。NP-Hard范围比NPC还要广。</li>
-<li>TSP问题 Travel Salesman Problem：一个推销员，要到n个城市推销商品，要找出包括n个城市的环路。用枚举的方法来说，这个路线有(n - 1)!种，为阶乘算法。所以是NP问题。因为给出一个任意的路径，能够得到该路径的开销，但是求解对比所有可能的旅行路径是不知道存不存在一个多项式解，所以再一次为NP问题。</li>
-</ol>
-<p>Reference：</p>
-<ol>
-<li>https://zhuanlan.zhihu.com/p/70305881</li>
-<li>https://blog.csdn.net/bitcarmanlee/article/details/51935400</li>
-<li>https://zhuanlan.zhihu.com/p/73953567</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://yeswhos.github.io/post/hello-gridea/</id>
-        <link href="https://yeswhos.github.io/post/hello-gridea/">
-        </link>
-        <updated>2018-12-11T16:00:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
-✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
-<!-- more -->
-<p><a href="https://github.com/getgridea/gridea">Github</a><br>
-<a href="https://gridea.dev/">Gridea 主页</a><br>
-<a href="http://fehey.com/">示例网站</a></p>
-<h2 id="特性">特性👇</h2>
-<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
-<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
-<p>🏷️  你可以对文章进行标签分组</p>
-<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
-<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
-<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
-<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
-<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
-<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
-<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
-<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
-<p>未来，它一定会成为你离不开的伙伴</p>
-<p>尽情发挥你的才华吧！</p>
-<p>😘 Enjoy~</p>
 ]]></content>
     </entry>
 </feed>
