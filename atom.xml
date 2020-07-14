@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-14T10:05:39.206Z</updated>
+    <updated>2020-07-14T10:26:13.669Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,6 +10,29 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
+    <entry>
+        <title type="html"><![CDATA[最小二乘法，欧氏距离]]></title>
+        <id>https://yeswhos.github.io/post/zui-xiao-er-cheng-fa-ou-shi-ju-chi/</id>
+        <link href="https://yeswhos.github.io/post/zui-xiao-er-cheng-fa-ou-shi-ju-chi/">
+        </link>
+        <updated>2020-07-14T03:19:56.000Z</updated>
+        <summary type="html"><![CDATA[<p>一些机器学习的优化问题可通过最小二乘法表达，比如用于点的曲线拟合。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>一些机器学习的优化问题可通过最小二乘法表达，比如用于点的曲线拟合。</p>
+<!-- more -->
+<p>欧氏距离Euclidean distance：就是两点之间的距离。距离可以是二维，三维或者多维的。公式如下：<br>
+<img src="https://yeswhos.github.io/post-images/1594722145244.jpg" alt="" loading="lazy"><br>
+其中欧氏距离变换经常用于机器视觉中。对于一张二值图片（黑白），将前景中的像素的值转化为该点到达最近背景点的距离。常常用于对图像中物体的提取。<br>
+最小二乘法 least square method：在线性回归中，最小二乘法就是试图找到一条直线，使所有样本到直线上的欧氏距离之和最小。比如下面这张图：<br>
+<img src="https://yeswhos.github.io/post-images/1594722317722.jpg" alt="" loading="lazy"></p>
+<p>Reference:</p>
+<ol>
+<li>西瓜书</li>
+<li>https://zhuanlan.zhihu.com/p/38128785</li>
+<li>https://baike.baidu.com/item/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%BA%A6%E9%87%8F/1274107?fromtitle=%E6%AC%A7%E6%B0%8F%E8%B7%9D%E7%A6%BB&amp;fromid=1798948</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[链表和顺序表的对比]]></title>
         <id>https://yeswhos.github.io/post/lian-biao-he-shun-xu-biao-de-dui-bi/</id>
@@ -254,24 +277,6 @@ Reference:</p>
 <li>西瓜书</li>
 <li>https://imlogm.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/occam-razor-NFL/</li>
 <li>https://zhuanlan.zhihu.com/p/42928992</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[算法的特征概念]]></title>
-        <id>https://yeswhos.github.io/post/suan-fa-de-te-zheng-gai-nian/</id>
-        <link href="https://yeswhos.github.io/post/suan-fa-de-te-zheng-gai-nian/">
-        </link>
-        <updated>2020-07-10T17:31:13.000Z</updated>
-        <summary type="html"><![CDATA[<p>算法是独立存在的一种解决问题的方法和思想</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>算法是独立存在的一种解决问题的方法和思想</p>
-<!-- more -->
-<ol>
-<li>算法具有0或者多个输入</li>
-<li>算法至少有1个或者多个输出</li>
-<li>有穷性：算法在有限的步骤之后会自动结束而不会无限循环（比如递归一定要给一个出口，满足某个条件跳出递归），并且每一个步骤可以在可接受的时间内完成（比如NP-Hard问题最好用启发式，而不是无尽的枚举方法）。</li>
-<li>可行性：算法的每一步都是可行的，也就是每一步都能够执行有限的次数完成。</li>
 </ol>
 ]]></content>
     </entry>
