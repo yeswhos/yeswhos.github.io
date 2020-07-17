@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-17T08:38:41.168Z</updated>
+    <updated>2020-07-17T09:29:52.998Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,25 +10,6 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
-    <entry>
-        <title type="html"><![CDATA[队列 queue]]></title>
-        <id>https://yeswhos.github.io/post/dui-lie-queue/</id>
-        <link href="https://yeswhos.github.io/post/dui-lie-queue/">
-        </link>
-        <updated>2020-07-17T01:35:08.000Z</updated>
-        <summary type="html"><![CDATA[<p>是只允许在一端进行插入操作，在另一端进行删除操作的线性表。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>是只允许在一端进行插入操作，在另一端进行删除操作的线性表。</p>
-<!-- more -->
-<p>允许插入的一端为队尾，允许删除的一端为队头。<br>
-先进先出（First in First out）原则。<br>
-<img src="https://yeswhos.github.io/post-images/1594975096480.jpg" alt="" loading="lazy"></p>
-<p>Reference:</p>
-<ol>
-<li>https://www.bilibili.com/video/BV18W411T7Vv?p=5&amp;t=3</li>
-</ol>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[栈 stack]]></title>
         <id>https://yeswhos.github.io/post/zhan-stack/</id>
@@ -43,6 +24,29 @@
 <p>没有任何位置概念，保证任何时候都可以访问/删除最后存入的那个元素，确定了一种默认的访问数据。</p>
 <p>按照后进先出/先进后出（LIFO， Last in First out）原理。</p>
 <figure data-type="image" tabindex="1"><img src="https://yeswhos.github.io/post-images/1594974856819.jpg" alt="" loading="lazy"></figure>
+<p>Reference:</p>
+<ol>
+<li>https://www.bilibili.com/video/BV18W411T7Vv?p=5&amp;t=3</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[队列 queue]]></title>
+        <id>https://yeswhos.github.io/post/dui-lie-queue/</id>
+        <link href="https://yeswhos.github.io/post/dui-lie-queue/">
+        </link>
+        <updated>2020-07-16T18:35:08.000Z</updated>
+        <summary type="html"><![CDATA[<p>是只允许在一端进行插入操作，在另一端进行删除操作的线性表。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>是只允许在一端进行插入操作，在另一端进行删除操作的线性表。</p>
+<!-- more -->
+<p>允许插入的一端为队尾，允许删除的一端为队头。<br>
+先进先出（First in First out）原则。<br>
+<img src="https://yeswhos.github.io/post-images/1594975096480.jpg" alt="" loading="lazy"></p>
+<p>双端队列 double-ended queue:<br>
+是一种具有队列和栈性质的数据结构。<br>
+双端队列的元素可以从两端弹出，其限定插入和删除操作在表的两端进行。双端队列可以在队列的任意一端入队和出队。<br>
+<img src="https://yeswhos.github.io/post-images/1594978185559.jpg" alt="" loading="lazy"></p>
 <p>Reference:</p>
 <ol>
 <li>https://www.bilibili.com/video/BV18W411T7Vv?p=5&amp;t=3</li>
