@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-16T09:48:08.272Z</updated>
+    <updated>2020-07-17T06:52:17.553Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -129,7 +129,7 @@ L_0, L_1, L_2范数。<br>
         <id>https://yeswhos.github.io/post/lian-biao-he-shun-xu-biao-de-dui-bi/</id>
         <link href="https://yeswhos.github.io/post/lian-biao-he-shun-xu-biao-de-dui-bi/">
         </link>
-        <updated>2020-07-13T20:01:53.000Z</updated>
+        <updated>2020-07-13T13:01:53.000Z</updated>
         <summary type="html"><![CDATA[<p>链表失去了顺序表随机读取的优点，同时链表由于增加了结点的指针区域，空间开销比较大，但对空间使用相对灵活。</p>
 ]]></summary>
         <content type="html"><![CDATA[<p>链表失去了顺序表随机读取的优点，同时链表由于增加了结点的指针区域，空间开销比较大，但对空间使用相对灵活。</p>
@@ -139,6 +139,10 @@ L_0, L_1, L_2范数。<br>
 链表和顺序表在插入和删除时是不同的操作。<br>
 链表的主要耗时是遍历查找。<br>
 顺序表查找很快，主要耗时是拷贝覆盖操作。</p>
+<p>作用：<br>
+链表和顺序表这种一组序列元素的组织形式，可以成为线性表。一个线性表是某个元素的一个集合，还记录着元素之间的一种顺序关系。常被用做更复杂的数据结构的实现基础。<br>
+顺序表：将元素连续的存储到一块存储区中，元素间的顺序关系由它们的存储顺序自然表示。<br>
+链表：将元素存放在链构建的一系列存储块中。</p>
 <p>Reference:</p>
 <ol>
 <li>https://www.bilibili.com/video/BV18W411T7Vv?p=15</li>
