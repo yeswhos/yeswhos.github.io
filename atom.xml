@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-26T10:31:38.540Z</updated>
+    <updated>2020-07-26T10:40:12.415Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,6 +10,32 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
+    <entry>
+        <title type="html"><![CDATA[均值，期望，方差，标准差，协方差]]></title>
+        <id>https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/</id>
+        <link href="https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/">
+        </link>
+        <updated>2020-07-26T03:32:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>基本的数学概念回顾</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>基本的数学概念回顾</p>
+<!-- more -->
+<p>均值：幼儿园的东西。<br>
+期望：值乘以对应的概率<br>
+<img src="https://yeswhos.github.io/post-images/1595759783226.jpg" alt="" loading="lazy"><br>
+方差 variance：各个数据与期望的差的平方的平均数。<br>
+<img src="https://yeswhos.github.io/post-images/1595759827568.jpg" alt="" loading="lazy"><br>
+标准差：方差开平方。<br>
+<img src="https://yeswhos.github.io/post-images/1595759852824.jpg" alt="" loading="lazy"><br>
+协方差：上面都是一维数据，协方差用来度量两个随机变量关系，比如标准差可以这样。<br>
+<img src="https://yeswhos.github.io/post-images/1595759960366.jpg" alt="" loading="lazy"><br>
+如果结果为正值，说明两者正相关，反之负相关。</p>
+<p>Reference:</p>
+<ol>
+<li>https://blog.csdn.net/gyhjlauy/article/details/92436368</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[归一化，标准化，中心化]]></title>
         <id>https://yeswhos.github.io/post/gui-yi-hua-biao-zhun-hua-zhong-xin-hua/</id>
@@ -309,29 +335,6 @@ L_0, L_1, L_2范数。<br>
 <ol>
 <li>西瓜书</li>
 <li>https://blog.csdn.net/speargod/article/details/80233619</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[最小二乘法，欧氏距离]]></title>
-        <id>https://yeswhos.github.io/post/zui-xiao-er-cheng-fa-ou-shi-ju-chi/</id>
-        <link href="https://yeswhos.github.io/post/zui-xiao-er-cheng-fa-ou-shi-ju-chi/">
-        </link>
-        <updated>2020-07-14T03:19:56.000Z</updated>
-        <summary type="html"><![CDATA[<p>一些机器学习的优化问题可通过最小二乘法表达，比如用于点的曲线拟合。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>一些机器学习的优化问题可通过最小二乘法表达，比如用于点的曲线拟合。</p>
-<!-- more -->
-<p>欧氏距离Euclidean distance：就是两点之间的距离。距离可以是二维，三维或者多维的。公式如下：<br>
-<img src="https://yeswhos.github.io/post-images/1594722145244.jpg" alt="" loading="lazy"><br>
-其中欧氏距离变换经常用于机器视觉中。对于一张二值图片（黑白），将前景中的像素的值转化为该点到达最近背景点的距离。常常用于对图像中物体的提取。<br>
-最小二乘法 least square method：在线性回归中，最小二乘法就是试图找到一条直线，使所有样本到直线上的欧氏距离之和最小。比如下面这张图：<br>
-<img src="https://yeswhos.github.io/post-images/1594722317722.jpg" alt="" loading="lazy"></p>
-<p>Reference:</p>
-<ol>
-<li>西瓜书</li>
-<li>https://zhuanlan.zhihu.com/p/38128785</li>
-<li>https://baike.baidu.com/item/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%BA%A6%E9%87%8F/1274107?fromtitle=%E6%AC%A7%E6%B0%8F%E8%B7%9D%E7%A6%BB&amp;fromid=1798948</li>
 </ol>
 ]]></content>
     </entry>
