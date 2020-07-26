@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-07-26T10:40:12.415Z</updated>
+    <updated>2020-07-26T10:54:50.890Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,32 +10,6 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
-    <entry>
-        <title type="html"><![CDATA[均值，期望，方差，标准差，协方差]]></title>
-        <id>https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/</id>
-        <link href="https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/">
-        </link>
-        <updated>2020-07-26T03:32:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>基本的数学概念回顾</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>基本的数学概念回顾</p>
-<!-- more -->
-<p>均值：幼儿园的东西。<br>
-期望：值乘以对应的概率<br>
-<img src="https://yeswhos.github.io/post-images/1595759783226.jpg" alt="" loading="lazy"><br>
-方差 variance：各个数据与期望的差的平方的平均数。<br>
-<img src="https://yeswhos.github.io/post-images/1595759827568.jpg" alt="" loading="lazy"><br>
-标准差：方差开平方。<br>
-<img src="https://yeswhos.github.io/post-images/1595759852824.jpg" alt="" loading="lazy"><br>
-协方差：上面都是一维数据，协方差用来度量两个随机变量关系，比如标准差可以这样。<br>
-<img src="https://yeswhos.github.io/post-images/1595759960366.jpg" alt="" loading="lazy"><br>
-如果结果为正值，说明两者正相关，反之负相关。</p>
-<p>Reference:</p>
-<ol>
-<li>https://blog.csdn.net/gyhjlauy/article/details/92436368</li>
-</ol>
-]]></content>
-    </entry>
     <entry>
         <title type="html"><![CDATA[归一化，标准化，中心化]]></title>
         <id>https://yeswhos.github.io/post/gui-yi-hua-biao-zhun-hua-zhong-xin-hua/</id>
@@ -65,6 +39,35 @@
 <ol>
 <li>https://www.jianshu.com/p/95a8f035c86c</li>
 <li>https://blog.csdn.net/young951023/article/details/78389445</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[均值，期望，方差，标准差，协方差，均方差，均方误差]]></title>
+        <id>https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/</id>
+        <link href="https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/">
+        </link>
+        <updated>2020-07-25T20:32:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>基本的数学概念回顾</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>基本的数学概念回顾</p>
+<!-- more -->
+<p>均值：幼儿园的东西。<br>
+期望：值乘以对应的概率<br>
+<img src="https://yeswhos.github.io/post-images/1595759783226.jpg" alt="" loading="lazy"><br>
+方差 Variance：各个数据与期望的差的平方的平均数。<br>
+是用来衡量随机变量或一组数据时的离散程度的度量，度量变量和其数学期望之间的偏离程度。<br>
+<img src="https://yeswhos.github.io/post-images/1595759827568.jpg" alt="" loading="lazy"><br>
+标准差 Standard Deviation：方差开平方，也成为均方差。<br>
+<img src="https://yeswhos.github.io/post-images/1595759852824.jpg" alt="" loading="lazy"><br>
+协方差：上面都是一维数据，协方差用来度量两个随机变量关系，比如标准差可以这样。<br>
+<img src="https://yeswhos.github.io/post-images/1595759960366.jpg" alt="" loading="lazy"><br>
+如果结果为正值，说明两者正相关，反之负相关。<br>
+均方误差 Mean Squared Error：各数据偏离真实值差值的平方和的平均数。也就是误差平方和的平均数。均方误差的开方为均方根误差，均方根误差才和标准差形式上接近。</p>
+<p>Reference:</p>
+<ol>
+<li>https://blog.csdn.net/gyhjlauy/article/details/92436368</li>
+<li>https://zhuanlan.zhihu.com/p/83410946</li>
 </ol>
 ]]></content>
     </entry>
