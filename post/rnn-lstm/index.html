@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>树 | yeswhos</title>
+<title>RNN, LSTM | yeswhos</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,13 +18,12 @@
 
 
 
-    <meta name="description" content="是一种抽象数据类型（ADT）的数据结构，用来模拟具有树状结构性质的数据集合。它由n（n &gt;= 1）个有限节点组成的一个具有层次关系的集合。
+    <meta name="description" content="RNN：Recurrent Neural Network
+LSTM：Long-Short Term Memory
 
-树具有以下特点：
-
-每个节点有0个或者多个子节点
-没有父节点的节点成为根节点
-每个非根节点有..." />
+RNN：
+特点：对具有序列特性的数据有效，能挖掘数据中的时序信息以及语义信息。
+（时序特性，符合时间顺序，逻辑顺序等，比如人..." />
     <meta name="keywords" content="算法/AI基础" />
   </head>
   <body>
@@ -96,36 +95,25 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">树</h2>
-            <div class="post-date">2020-07-21</div>
+            <h2 class="post-title">RNN, LSTM</h2>
+            <div class="post-date">2020-07-31</div>
             
             <div class="post-content" v-pre>
-              <p>是一种抽象数据类型（ADT）的数据结构，用来模拟具有树状结构性质的数据集合。它由n（n &gt;= 1）个有限节点组成的一个具有层次关系的集合。</p>
+              <p>RNN：Recurrent Neural Network<br>
+LSTM：Long-Short Term Memory</p>
 <!-- more -->
-<p>树具有以下特点：</p>
-<ol>
-<li>每个节点有0个或者多个子节点</li>
-<li>没有父节点的节点成为根节点</li>
-<li>每个非根节点有且只有一个父节点</li>
-<li>除了根节点以外，每个子结点可以分为多个不相交的子树。<br>
-<img src="https://yeswhos.github.io/post-images/1595322824478.jpg" alt="" loading="lazy"></li>
-</ol>
-<p>树的术语：<br>
-<img src="https://yeswhos.github.io/post-images/1595322875525.jpg" alt="" loading="lazy"><br>
-有的术语我也没听说过，用到的不多。</p>
-<p>树的种类：<br>
-<img src="https://yeswhos.github.io/post-images/1595322940318.jpg" alt="" loading="lazy"></p>
-<p>二叉树通常以链表形式存储。</p>
-<p>应用场景：</p>
-<ol>
-<li>xml， html等用到树</li>
-<li>路由协议用到树</li>
-<li>mysql数据库用到树</li>
-<li>文件系统的目录结构用到树</li>
-<li>AI算法都是树搜索，也包括decision tree</li>
-</ol>
-<p>Reference:<br>
-https://www.bilibili.com/video/BV18W411T7Vv?p=39</p>
+<p>RNN：<br>
+特点：对具有序列特性的数据有效，能挖掘数据中的时序信息以及语义信息。<br>
+（时序特性，符合时间顺序，逻辑顺序等，比如人说的一句话，是几个单词按照一定的逻辑顺序拼接起来的）</p>
+<p>结构：<br>
+<img src="https://yeswhos.github.io/post-images/1596186342549.jpg" alt="" loading="lazy"><br>
+上图X （t - 1）代表一个单词的向量，其他的x也是同样的。W是每个时间点之间的权重矩阵。<br>
+这样，RNN可以记住每个时刻的信息，每个时刻的隐藏层不仅由该时刻的输入层决定，还由上一个时刻的隐藏层决定。<br>
+公式如下，Oｔ代表ｔ时刻的输出，Sｔ代表ｔ时刻的隐藏层。<br>
+<img src="https://yeswhos.github.io/post-images/1596186751673.jpg" alt="" loading="lazy"></p>
+<p>(例子可以看下面的链接)</p>
+<p>总结:RNN每一个时刻的输出结果都与上一时的输入有很大关系.<br>
+如果把输入序列换个顺序,那得到的结果也将是截然不同的.可以处理序列数据,同时对序列也很敏感.</p>
 
             </div>
             
@@ -140,9 +128,9 @@ https://www.bilibili.com/video/BV18W411T7Vv?p=39</p>
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://yeswhos.github.io/post/sou-suo/">
+                <a href="https://yeswhos.github.io/post/ou-ji-li-de-ju-chi-zui-xiao-er-cheng-fa/">
                   <h3 class="post-title">
-                    搜索
+                    欧几里得距离，最小二乘法
                   </h3>
                 </a>
               </div>
