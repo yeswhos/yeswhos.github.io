@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://yeswhos.github.io</id>
     <title>yeswhos</title>
-    <updated>2020-10-08T08:31:16.831Z</updated>
+    <updated>2020-10-09T06:29:00.870Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://yeswhos.github.io"/>
     <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>https://yeswhos.github.io/images/avatar.png</logo>
     <icon>https://yeswhos.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, yeswhos</rights>
+    <entry>
+        <title type="html"><![CDATA[Relu激活函数]]></title>
+        <id>https://yeswhos.github.io/post/relu-ji-huo-han-shu/</id>
+        <link href="https://yeswhos.github.io/post/relu-ji-huo-han-shu/">
+        </link>
+        <updated>2020-10-09T06:25:30.000Z</updated>
+        <content type="html"><![CDATA[<p>在零点以及小于零不可导，等于0<br>
+在零点以后，y = x</p>
+<p>优点：<br>
+解决了梯度消失，爆炸的问题。<br>
+计算方便，计算速度快，求导方便。<br>
+加速网络训练。</p>
+<p>缺点：<br>
+负数部分为0，会导致一些神经元无法激活。<br>
+输出不是以0为中心。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Data Augmentation 数据扩增]]></title>
+        <id>https://yeswhos.github.io/post/data-augmentation-shu-ju-kuo-zeng/</id>
+        <link href="https://yeswhos.github.io/post/data-augmentation-shu-ju-kuo-zeng/">
+        </link>
+        <updated>2020-10-09T06:19:19.000Z</updated>
+        <content type="html"><![CDATA[<p>假设训练神经网络来完成图片的分类，希望通过扩增训练数据来解决过拟合的问题。可以用Data Augmentation。<br>
+Data Augmentation的方法有：水平翻转图片，裁剪图片，旋转和扭曲图片数字等等。</p>
+<p>PS：防止过拟合还有early stop，<br>
+训练次数增加，训练集的训练误差逐渐降低。然后验证集上的误差在快要上升的时候停止训练。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[反向传播 Backpropagation]]></title>
         <id>https://yeswhos.github.io/post/fan-xiang-chuan-bo-backpropagation/</id>
@@ -34,6 +63,7 @@
 <p>Drop可视化表现：<br>
 <img src="https://yeswhos.github.io/post-images/1602136262500.png" alt="" loading="lazy"><br>
 思想是训练整体DNN，然后平均整个集合的结果，而不是单个训练某个DNN。DNN是以一定概率舍弃掉部分神经元，而其他神经元则以1-p的概率保留。已经舍去掉的神经元输出被设为0.</p>
+<p>神经网络会存在过拟合的方式，dropout通过在训练过程中随即丢掉部分神经元来减小神经网络的规模，从此防止过拟合。</p>
 ]]></content>
     </entry>
     <entry>
@@ -192,92 +222,6 @@ LSTM：Long-Short Term Memory</p>
 </ol>
 <p>Reference:<br>
 https://www.bilibili.com/video/BV18W411T7Vv?p=39</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[搜索]]></title>
-        <id>https://yeswhos.github.io/post/sou-suo/</id>
-        <link href="https://yeswhos.github.io/post/sou-suo/">
-        </link>
-        <updated>2020-07-21T01:53:16.000Z</updated>
-        <summary type="html"><![CDATA[<p>搜索是在一个集合中找到特定元素的算法过程。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>搜索是在一个集合中找到特定元素的算法过程。</p>
-<!-- more -->
-<p>搜索的答案是真的或者假的，因为该项目是否存在。几种常见的方法：顺序查找，二分法查找，二叉树查找，哈希查找。</p>
-<p>二分法查找：<br>
-折半查找，优点是次数少，查找速度快，平均性能好。<br>
-缺点是要求待查表为有序表，且插入删除苦难你。<br>
-因此，折半查找方法适用于不经常变动而查找频繁的有序列表。<br>
-最优时间复杂度：O（1）<br>
-最坏时间复杂度：O（nlogn）</p>
-<p>Reference:</p>
-<ol>
-<li>https://www.bilibili.com/video/BV18W411T7Vv?p=37</li>
-</ol>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[排序算法 sorting algorithm]]></title>
-        <id>https://yeswhos.github.io/post/pai-xu-suan-fa-sorting-algorithm/</id>
-        <link href="https://yeswhos.github.io/post/pai-xu-suan-fa-sorting-algorithm/">
-        </link>
-        <updated>2020-07-16T19:42:13.000Z</updated>
-        <summary type="html"><![CDATA[<p>是一种能将遗传数据依照特定顺序进行排列的一种算法。</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>是一种能将遗传数据依照特定顺序进行排列的一种算法。</p>
-<!-- more -->
-<p>排序算法的稳定性：<br>
-稳定排序会让原本有相等键值的记录维持相对次序。<br>
-比如：<br>
-<img src="https://yeswhos.github.io/post-images/1594979152457.jpg" alt="" loading="lazy"></p>
-<p>冒泡排序 Bubble sort：<br>
-重复地走访要排序的数列，一次比较两个元素，如果后面小于前面就交换。<br>
-步骤：<br>
-比较相邻的元素。如果第一个比第二个大，就交换他们两个。<br>
-对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。这步做完后，最后的元素会是最大的数。<br>
-针对所有的元素重复以上的步骤，除了最后一个。<br>
-持续每次对越来越少的元素重复上面的步骤，直到没有任何一对数字需要比较。</p>
-<p>选择排序 Selection sort：<br>
-无论什么数据都是O(n^2)时间复杂度，所以用到时候希望数据规模越小越好，而且不用占用额外的内存空间。<br>
-步骤：<br>
-首先在未排序序列中找到最小元素，存放到排序序列的起始位置。<br>
-再从剩余未排序元素中继续寻找最小元素，然后放到已排序序列的末尾。<br>
-重复第二步，直到所有元素均排序完毕。</p>
-<p>插入排序 Insert sort：<br>
-构建有序序列，对于未排序序列，在已排序列中从后向前扫描，找到相应位置插入。<br>
-步骤：<br>
-把一个列表分成两部分，第一个元素为一部分，也是有序序列，剩下的为另一部分，无序序列。<br>
-从头到尾扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。</p>
-<p>快速排序 Quick sort：（用的最多）<br>
-步骤：<br>
-从列表中挑第一个元素，为基准pivot<br>
-排序数列，比基准小的在前面，大的在后面。<br>
-递归实现，把小于基准的数列和大于基准的数列排序。（出口是起点等于或者大于终点的时候）</p>
-<p>希尔排序 Shell sort：<br>
-基本也是以插入算法为基础的。<br>
-步骤：<br>
-选择一个gap，一般是长度除2，对gap的值进行插入排序。<br>
-（比如gap = 4，数组就是[ list[0], list[4], list[8] ], [list [1], list[5], list[9] ] )<br>
-分别对子序列排序过后，gap除2，再进行同样的过程，直到gap为1，也就是进行的插入排序<br>
-<img src="https://yeswhos.github.io/post-images/1595241654125.jpg" alt="" loading="lazy"></p>
-<p>归并排序：<br>
-建立在归并操作上的排序算法，就是拆了合，需要递归，也需要另一个数组存储结果。<br>
-步骤：<br>
-申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；<br>
-（上面是拆）<br>
-设定两个指针，最初位置分别为两个已经排序序列的起始位置；<br>
-（设置好指针开始合了）<br>
-比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置；<br>
-重复步骤 3 直到某一指针达到序列尾；<br>
-将另一序列剩下的所有元素直接复制到合并序列尾。</p>
-<p>总结：<br>
-几种排序的时间复杂度：<br>
-<img src="https://yeswhos.github.io/post-images/1595241848916.jpg" alt="" loading="lazy"></p>
-<p>Reference:</p>
-<ol>
-<li>https://www.bilibili.com/video/BV18W411T7Vv?p=22</li>
-</ol>
 ]]></content>
     </entry>
 </feed>

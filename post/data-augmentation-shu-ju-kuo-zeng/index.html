@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>NFL 没有免费午餐 | yeswhos</title>
+<title>Data Augmentation 数据扩增 | yeswhos</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
@@ -18,10 +18,9 @@
 
 
 
-    <meta name="description" content="脱离具体问题，空谈“什么学习算法更好”毫无意义。若考虑所有潜在的问题，则所有的学习算法都一样好。要谈论算法问题得相对优劣，必须要针对所有潜在的问题。
-
-前提：所有问题的出现机会相同，或者所有问题同等重要。
-定义：若学习算法La在某些问题比L..." />
+    <meta name="description" content="假设训练神经网络来完成图片的分类，希望通过扩增训练数据来解决过拟合的问题。可以用Data Augmentation。
+Data Augmentation的方法有：水平翻转图片，裁剪图片，旋转和扭曲图片数字等等。
+PS：防止过拟合还有earl..." />
     <meta name="keywords" content="算法/AI基础" />
   </head>
   <body>
@@ -93,23 +92,14 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">NFL 没有免费午餐</h2>
-            <div class="post-date">2020-07-09</div>
+            <h2 class="post-title">Data Augmentation 数据扩增</h2>
+            <div class="post-date">2020-10-09</div>
             
             <div class="post-content" v-pre>
-              <p>脱离具体问题，空谈“什么学习算法更好”毫无意义。若考虑所有潜在的问题，则所有的学习算法都一样好。要谈论算法问题得相对优劣，必须要针对所有潜在的问题。</p>
-<!-- more -->
-<p>前提：所有问题的出现机会相同，或者所有问题同等重要。<br>
-定义：若学习算法La在某些问题比Lb好，那就会存在另外一些问题，La比Lb差。也就是：对于不同的问题，不同的学习算法的泛化能力不同。<br>
-（泛化能力指算法对于新样本的适应能力。学习的目的是学到隐含数据背后的规律，对于同一规律的学习集之外的数据，经过训练的网络也能给出合适的输出。）<br>
-<img src="https://yeswhos.github.io/post-images/1594377154685.jpg" alt="" loading="lazy"><br>
-<img src="https://yeswhos.github.io/post-images/1594377159491.jpg" alt="" loading="lazy"><br>
-所以，不去结合具体问题去比较哪个模型更好没有意义。<br>
-并没有深入研究其中的期望等数学问题。。</p>
-<p>Reference：</p>
-<ol>
-<li>西瓜书</li>
-</ol>
+              <p>假设训练神经网络来完成图片的分类，希望通过扩增训练数据来解决过拟合的问题。可以用Data Augmentation。<br>
+Data Augmentation的方法有：水平翻转图片，裁剪图片，旋转和扭曲图片数字等等。</p>
+<p>PS：防止过拟合还有early stop，<br>
+训练次数增加，训练集的训练误差逐渐降低。然后验证集上的误差在快要上升的时候停止训练。</p>
 
             </div>
             
@@ -124,9 +114,9 @@
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://yeswhos.github.io/post/ce-shi/">
+                <a href="https://yeswhos.github.io/post/fan-xiang-chuan-bo-backpropagation/">
                   <h3 class="post-title">
-                    P，NP，NP-Hard，NPC问题
+                    反向传播 Backpropagation
                   </h3>
                 </a>
               </div>
