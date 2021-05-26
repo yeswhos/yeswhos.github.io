@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>python题目 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1621992665408">
+<link rel="stylesheet" href="https://yeswhos.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="1、字典如何删除键和合并两个字典：
+删除：del dic[key]
+合并：dic.update(dic_2)
+2、python的GIL（Global Interpreter Lock）：
+GIL是全局解释器锁，假如同一进程中有多个线程执行，..." />
+    <meta name="keywords" content="数据结构" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io">
+        <img src="https://yeswhos.github.io/images/avatar.png?v=1621992665408" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">python题目</h2>
+            <div class="post-date">2021-05-26</div>
+            
+            <div class="post-content" v-pre>
+              <p>1、字典如何删除键和合并两个字典：<br>
+删除：del dic[key]<br>
+合并：dic.update(dic_2)</p>
+<p>2、python的GIL（Global Interpreter Lock）：<br>
+GIL是全局解释器锁，假如同一进程中有多个线程执行，一个线程在运行python时，就会霸占整个进程，就像是加了一把锁也就是GIL。<br>
+使该进程中其他线程无法进行，等该python线程运行完了，其他线程才能运行。<br>
+如果线程遇到了耗时的操作，GIL就会自己解开，让其他线程也能进行。<br>
+所以多线程其中线程也不能并行，都是有前后执行顺序的。<br>
+而多进程中每个进程系统资源都是单独分配的，相当于每个进程都有一个python解释器，所以进程可以实现多个进程同时执行，缺点是进程系统资源消耗过大。</p>
+<p>3、*arg, *kwargs含义：<br>
+可以将不定量参数传给函数。<br>
+arg是发一个非键值对的不定量参数，来给函数<br>
+kwargs是允许将不定长度的键值对参数，来给参数</p>
+<p>4、简述面向对象中__new__和__init__区别（看不懂，不想看）<br>
+<strong>init</strong>：初始化方法，创建对象后，就立刻被默认调用了，可接收参数<br>
+<strong>new</strong>：至少有个参数cls，代表当类。<br>
+1、__new__至少要有一个参数cls，代表当前类，此参数在实例化时由Python解释器自动识别<br>
+2、__new__必须要有返回值，返回实例化出来的实例，这点在自己实现__new__时要特别注意，可以return父类（通过super(当前类名, cls)）__new__出来的实例，或者直接是object的__new__出来的实例<br>
+3、__init__有一个参数self，就是这个__new__返回的实例，__init__在__new__的基础上可以完成一些其它初始化的动作，__init__不需要返回值<br>
+4、如果__new__创建的是当前类的实例，会自动调用__init__函数，通过return语句里面调用的__new__函数的第一个参数是cls来保证是当前类实例，如果是其他类的类名，；那么实际创建返回的就是其他类的实例，其实就不会调用当前类的__init__函数，也不会调用其他类的__init__函数。</p>
+<p>5、简述with方法打开处理文件帮我我们做了什么？<br>
+就打开文件或者写文件的时候可能会遇到异常，所以最好捕获异常，然后无论发生什么都要close掉，但with就带了最后close动作</p>
+<p>6、map函数的使用：列表[1,2,3,4,5],请使用map()函数输出[1,4,9,16,25]，并使用列表推导式提取出大于10的数，最终输出[16,25]。</p>
+<p>7、python中生成随机整数、随机小数、0--1之间小数方法<br>
+random.randint(5, 10)<br>
+random.random()</p>
+<p>8、10个Linux常用命令<br>
+ls pwd cd touch rm mkdir tree cp mv cat more grep echo</p>
+<p>9、可变及不可变数据类型：<br>
+不可变：int，string，tuple，如果改变了变量的值相当于就换了一个对象<br>
+可变：list，dict，改变值而且不会新建对象</p>
+<p>10、lambda：<br>
+1、用lambda函数实现两个数相乘<br>
+res = lambda(a, b: a * b)<br>
+print(res(2, 3))<br>
+2、使用lambda函数对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4]，输出结果为[0,2,4,8,8,9,-2,-4,-4,-5,-20]，正数从小到大，负数从大到小<br>
+list = sorted(list_1, key=x:(x&lt;0, abs(x)))<br>
+3、对list排序foo = [-5,8,0,4,9,-4,-20,-2,8,2,-4],使用lambda函数从小到大排序<br>
+list = sorted(list_1, key=x:x)<br>
+4、列表嵌套字典的排序，分别根据年龄和姓名排序<br>
+foo = [{&quot;name&quot;:&quot;zs&quot;,&quot;age&quot;:19},{&quot;name&quot;:&quot;ll&quot;,&quot;age&quot;:54},<br>
+{&quot;name&quot;:&quot;wa&quot;,&quot;age&quot;:17},{&quot;name&quot;:&quot;df&quot;,&quot;age&quot;:23}]<br>
+list = sorted(list_1, key=lambda x:x[name])<br>
+5、根据字符串长度排序<br>
+list = sorted(list_1, key=lambda x:len(x))</p>
+<p>11、字典值排序：字典根据键从小到大排序<br>
+new_dic = sorted(dic.items(), key=lambda i:i[0], reversed=False)</p>
+<p>12、列表：列表推导式求列表所有奇数并构造新列表<br>
+list = (for i in list_1 if i % 2 == 1)</p>
+<p>13、赋值，深拷贝，浅拷贝<br>
+浅拷贝：第一种情况：复制的 对象中无 复杂 子对象，原来值的改变并不会影响浅复制的值，同时浅复制的值改变也并不会影响原来的值。原来值的id值与浅复制原来的值不同。<br>
+第二种情况：复制的对象中有 复杂 子对象 （例如列表中的一个子元素是一个列表）， 改变原来的值 中的复杂子对象的值 ，会影响浅复制的值。</p>
+<p>深拷贝：完全复制独立，包括内层列表和字典</p>
+<p>赋值：对象中有无子对象，都会相应的改变</p>
+<p>14、列表推导式、字典推导式、生成器<br>
+列表推导式：list = [i for i in range(10)]<br>
+生成器：list = (i for i in range(10))<br>
+字典推导式：dic = {k:random.randint(4, 9) for i in ['a', 'b', 'c', 'd', 'e']}</p>
+<p>15、python垃圾回收机制<br>
+python垃圾回收主要以引用计数为主，标记-清除和分代清除为辅的机制。<br>
+1、引用计数算法<br>
+当有1个变量保存了对象的引用时，此对象的引用计数就会加1<br>
+当使用del删除变量指向的对象时，如果对象的引用计数不为1，比如3，那么此时只会让这个引用计数减1，即变为2，当再次调用del时，变为1，如果再调用1次del，此时会真的把对象进行删除</p>
+<p>16、生成器：</p>
+<p>1、定义：<br>
+通过列表生成式，我们可以直接创建一个列表，但是，受到内存限制，列表容量肯定是有限的，而且创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。</p>
+<p>2、好处：<br>
+所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间，在Python中，这种一边循环一边计算的机制，称为生成器：generator</p>
+<p>3、创建一个生成器：<br>
+要创建一个generator，有很多种方法，第一种方法很简单，只有把一个列表生成式的[]中括号改为（）小括号，就创建一个generator，比如[for i in range(10)] 改成 (for i in range(10))</p>
+<p>4、获取一个元素：<br>
+如果要一个个打印出来，可以通过next（）函数获得generator的下一个返回值。或者直接用for循环来迭代，毕竟她是一边循环一遍计算的机制</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/ZPOzCeeQj/" class="tag">
+                    数据结构
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/kai-fa-jiao-fu-mo-shi/">
+                  <h3 class="post-title">
+                    开发交付模式
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
