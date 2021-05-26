@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1621993607774">
+<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1622059748570">
 <link rel="stylesheet" href="https://yeswhos.github.io/styles/main.css">
 
 
@@ -25,13 +25,11 @@
 
 
     <meta name="description" content="模型
-V模型
-1、过程：
-用户需求，需求分析，概要设计，详细设计，编码（编码在最底层）
-单元测试，集成测试，系统测试，验收测试
-2、优点：
-左端表示传统的瀑布开发模型，右端明确的把测试分成了不同的级别或者阶段，测试过程更加具体
-测试的各个阶..." />
+软件开发的流程大概是：
+1、首先产品经理出产品需求，并进行需求评审（需求澄清），需要拉上开发，测试，产品，UI
+2、开发编写代码，此时测试编写测试用例（需求串讲）
+3、进行测试用例评审。（测试策略反串讲）
+4、开发人员联调自测后提测（..." />
     <meta name="keywords" content="测试" />
   </head>
   <body>
@@ -41,7 +39,7 @@ V模型
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://yeswhos.github.io">
-        <img src="https://yeswhos.github.io/images/avatar.png?v=1621993607774" class="site-logo">
+        <img src="https://yeswhos.github.io/images/avatar.png?v=1622059748570" class="site-logo">
         <h1 class="site-title">yeswhos</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -107,7 +105,15 @@ V模型
             <div class="post-date">2021-05-26</div>
             
             <div class="post-content" v-pre>
-              <h2 id="模型">模型</h2>
+              <h1 id="模型">模型</h1>
+<p>软件开发的流程大概是：<br>
+1、首先产品经理出产品需求，并进行需求评审（需求澄清），需要拉上开发，测试，产品，UI<br>
+2、开发编写代码，此时测试编写测试用例（需求串讲）<br>
+3、进行测试用例评审。（测试策略反串讲）<br>
+4、开发人员联调自测后提测（开发自测）<br>
+5、测试人员进行冒烟测试（转测试）<br>
+6、给出质量和测试报告，上线发版</p>
+<p>另外，软件开发（测试）流程有V模型和W模型之分，V模型主要是测试过程加在开发过程的后半段，而W模型是测试提前，甚至和开发是同步进行，测试不仅是程序，还包括需求和设计。W模型有利于尽早地全面的发现问题，降低软件开发的成本，风险前置。</p>
 <h2 id="v模型">V模型</h2>
 <p>1、过程：<br>
 用户需求，需求分析，概要设计，详细设计，编码（编码在最底层）<br>
@@ -144,7 +150,6 @@ V模型
 <p>1、功能测试<br>
 2、非功能测试：<br>
 性能要求（负载测试，压力测试，容量测试，可靠性测试），界面测试，兼容性测试，易用性测试，文档测试，可用性测试，安全测试，灾备恢复测试等等</p>
-<!-- more -->
 
             </div>
             
