@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1622059748570">
+<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1622160381528">
 <link rel="stylesheet" href="https://yeswhos.github.io/styles/main.css">
 
 
@@ -38,7 +38,7 @@ GIL是全局解释器锁，假如同一进程中有多个线程执行，..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://yeswhos.github.io">
-        <img src="https://yeswhos.github.io/images/avatar.png?v=1622059748570" class="site-logo">
+        <img src="https://yeswhos.github.io/images/avatar.png?v=1622160381528" class="site-logo">
         <h1 class="site-title">yeswhos</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -164,18 +164,35 @@ list = (for i in list_1 if i % 2 == 1)</p>
 字典推导式：dic = {k:random.randint(4, 9) for i in ['a', 'b', 'c', 'd', 'e']}</p>
 <p>15、python垃圾回收机制<br>
 python垃圾回收主要以引用计数为主，标记-清除和分代清除为辅的机制。<br>
-1、引用计数算法<br>
+引用计数算法：<br>
 当有1个变量保存了对象的引用时，此对象的引用计数就会加1<br>
 当使用del删除变量指向的对象时，如果对象的引用计数不为1，比如3，那么此时只会让这个引用计数减1，即变为2，当再次调用del时，变为1，如果再调用1次del，此时会真的把对象进行删除</p>
 <p>16、生成器：</p>
-<p>1、定义：<br>
-通过列表生成式，我们可以直接创建一个列表，但是，受到内存限制，列表容量肯定是有限的，而且创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。</p>
-<p>2、好处：<br>
-所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间，在Python中，这种一边循环一边计算的机制，称为生成器：generator</p>
-<p>3、创建一个生成器：<br>
-要创建一个generator，有很多种方法，第一种方法很简单，只有把一个列表生成式的[]中括号改为（）小括号，就创建一个generator，比如[for i in range(10)] 改成 (for i in range(10))</p>
-<p>4、获取一个元素：<br>
-如果要一个个打印出来，可以通过next（）函数获得generator的下一个返回值。或者直接用for循环来迭代，毕竟她是一边循环一遍计算的机制</p>
+<pre><code>1、定义：
+    通过列表生成式，我们可以直接创建一个列表，但是，受到内存限制，列表容量肯定是有限的，而且创建一个包含100万个元素的列表，不仅占用很大的存储空间，如果我们仅仅需要访问前面几个元素，那后面绝大多数元素占用的空间都白白浪费了。
+
+2、好处：
+    所以，如果列表元素可以按照某种算法推算出来，那我们是否可以在循环的过程中不断推算出后续的元素呢？这样就不必创建完整的list，从而节省大量的空间，在Python中，这种一边循环一边计算的机制，称为生成器：generator
+
+3、创建一个生成器：
+    要创建一个generator，有很多种方法，第一种方法很简单，只有把一个列表生成式的[]中括号改为（）小括号，就创建一个generator，比如[for i in range(10)] 改成 (for i in range(10))
+
+4、获取一个元素：
+    如果要一个个打印出来，可以通过next（）函数获得generator的下一个返回值。或者直接用for循环来迭代，毕竟她是一边循环一遍计算的机制
+</code></pre>
+<p>17、装饰器：<br>
+1、先是有闭包的特质：在outer函数内，又定义了一个inner函数，并且inner函数又引用了外部函数outer的变量x，这就是一个闭包了。<br>
+2、装饰器就是：python装饰器就是用于拓展原来函数功能的一种函数，这个函数的特殊之处在于它的返回值也是一个函数，使用python装饰器的好处就是在不用更改原函数的代码前提下给函数增加新的功能。使用时，再需要的函数前加上@demo即可。</p>
+<p>18、全局变量与局部变量相同问题<br>
+1、定义在函数外部的是全局变量，内部是局部变量<br>
+2、函数中修改<strong>不可变的全局变量</strong>需要用global声明，否则出错。本质是函数内部不声明的话，无法改变全局变量的指向，即不能将全局变量指向新的数据。修改<strong>可变的全局变量</strong>则不需要声明。<br>
+3、如果全局和局部名字相同，使用的则是局部变量</p>
+<p>19、python变量引用及销毁<br>
+定义一个变量的时候，如a=1，其实是程序开辟了一块内存空间，然后把Kwan放进去，再让变量名指向1所在的内存地址。a=2的时候就是变量名指向了另一个内存地址。</p>
+<p>20、dict的底层结构，list和tuple的区别<br>
+dict 底层使用的哈希表，查找的时候时间复杂度O（1）<br>
+list可变，tuple不可变。<br>
+tuple是保存的引用不可变，也就是没法改变这个对象，但假如这个对象是可变的，假如里面还有个list，那这个list还是可变的</p>
 
             </div>
             
