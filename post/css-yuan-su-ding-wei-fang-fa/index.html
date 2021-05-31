@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8" >
 
-<title>CSS元素定位方法 | yeswhos</title>
+<title>元素定位方法 | yeswhos</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1622281233070">
+<link rel="shortcut icon" href="https://yeswhos.github.io/favicon.ico?v=1622460978096">
 <link rel="stylesheet" href="https://yeswhos.github.io/styles/main.css">
 
 
@@ -39,7 +39,7 @@ tag就是find_el..." />
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://yeswhos.github.io">
-        <img src="https://yeswhos.github.io/images/avatar.png?v=1622281233070" class="site-logo">
+        <img src="https://yeswhos.github.io/images/avatar.png?v=1622460978096" class="site-logo">
         <h1 class="site-title">yeswhos</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -101,7 +101,7 @@ tag就是find_el..." />
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">CSS元素定位方法</h2>
+            <h2 class="post-title">元素定位方法</h2>
             <div class="post-date">2021-05-28</div>
             
             <div class="post-content" v-pre>
@@ -166,7 +166,35 @@ id前面加上# : #id</p>
 父类元素的奇数节点且类型为p<br>
 7、兄弟节点的选择：<br>
 h3 + span就是选择 h3 后面紧跟着的兄弟节点 span。<br>
-选择 h3 后面所有的兄弟节点 span，可以这样写 h3 ~ span</p>
+选择 h3 后面所有的兄弟节点 span，可以这样写 h3 ~ span<br>
+8、option，h4相当于两个标签的元素都选择，关键在逗号</p>
+<p>6、区别：<br>
+xpath可以选择范围，比如前三个元素，css只能选择第几第几个元素<br>
+xpath可以选择前节点，css不能选择前面的兄弟节点</p>
+<h2 id="xpath选择元素">xpath选择元素</h2>
+<p>1、下面的东西都是用这个方法 elements = driver.find_elements_by_xpath(&quot;/html/body/div&quot;)<br>
+2、相对路径用//。//div//p和//div/p的区别就是，第一个是div下面所有的子节点中的p标签，第二个是直接子节点是p标签的。<br>
+3、通配符：<em>，比如//div/<em>就是div下面的所有子节点<br>
+4、根据属性值，属性，id选择。[@属性名='属性值']，[@id='id'],[@class].<br>
+或者p标签页下的一个class，就是//p[@class=&quot;capital huge-city&quot;]<br>
+5、属性值包含字符串：<br>
+包含某个字符串：//</em>[contains(@style,'color']<br>
+以某个字符串开头：//[starts-with(@style,'color')]<br>
+6、按次序选择：<br>
+第二个p类型的子元素：//p[2]<br>
+div中第二个p类型的子元素：//div/p[2]<br>
+div的第二个任意类型的元素：//div/</em>[2]<br>
+p的倒数第1个元素：//p[last()]<br>
+p的倒数第2个元素：//p[last()-1]<br>
+option前两个子元素：//option[position()&lt;=2]<br>
+选择属性值的倒数前两个的子元素：//[@class='mutili-choice']//option[position()&gt;=last()-2]<br>
+7、组选择：<br>
+//option | //p，两个标签的都会选<br>
+等同于CSS选择器option , h4</p>
+<p>8、选择父节点：<br>
+就是/..，比如//*[@id='china']/..</p>
+<p>9、选择single choice 后续的兄弟节点//<em>[@class='single_choice']/following-sibling::</em><br>
+选择前面的兄弟节点就是：preceding-sibling::</p>
 
             </div>
             
