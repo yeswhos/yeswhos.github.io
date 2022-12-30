@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>黑盒白盒测试方法 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="黑盒测试
+主要用于测试产品软件功能，无需关注内部实现和处理过程
+1、等价类划分：
+将输入或者输出数据划分为若干等价类，每个等价类内测试结果相同。
+如：选取从1-90的数，小于1和大于90为无效等价类，1-90的数为有效等价类
+2、边界值划分..." />
+    <meta name="keywords" content="测试" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">黑盒白盒测试方法</h2>
+            <div class="post-date">2021-05-28</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="黑盒测试">黑盒测试</h2>
+<p>主要用于测试产品软件功能，无需关注内部实现和处理过程</p>
+<p>1、等价类划分：<br>
+将输入或者输出数据划分为若干等价类，每个等价类内测试结果相同。<br>
+如：选取从1-90的数，小于1和大于90为无效等价类，1-90的数为有效等价类</p>
+<p>2、边界值划分：<br>
+正好等于，刚刚大于或者刚刚小于边界值的数据作为测试数据</p>
+<p>3、判定表：<br>
+采用表格的形式，列出所有条件和结果的组合，做到无测试遗漏的覆盖。<br>
+适用于条件项各自独立，互不影响的情况。<br>
+技巧在于把条件划分清晰，对条件组合数量达到最小</p>
+<p>4、错误推断法：<br>
+基于经验和直觉推测可能存在的错误，从而有针对性。与测试经验库紧密相关。</p>
+<h2 id="白盒测试">白盒测试</h2>
+<p>根据被测程序的内部结构，设计测试用例的一种测试方法</p>
+<p>1、语句覆盖：<br>
+每个可执行的语句至少执行一次</p>
+<p>2、判定（分支覆盖）：<br>
+每个判断分支至少执行一次</p>
+<p>3、判定-条件覆盖：<br>
+每个判断的真假分支至少执行一次，每个条件的取值也至少执行一次</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/kEUMKYLyO/" class="tag">
+                    测试
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/css-yuan-su-ding-wei-fang-fa/">
+                  <h3 class="post-title">
+                    元素定位方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

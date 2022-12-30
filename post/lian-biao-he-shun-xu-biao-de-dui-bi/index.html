@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>链表和顺序表的对比 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="链表失去了顺序表随机读取的优点，同时链表由于增加了结点的指针区域，空间开销比较大，但对空间使用相对灵活。
+
+各种操作复杂度对比：
+
+链表和顺序表在插入和删除时是不同的操作。
+链表的主要耗时是遍历查找。
+顺序表查找很快，主要耗时是拷贝覆盖操作..." />
+    <meta name="keywords" content="数据结构" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">链表和顺序表的对比</h2>
+            <div class="post-date">2020-07-13</div>
+            
+            <div class="post-content" v-pre>
+              <p>链表失去了顺序表随机读取的优点，同时链表由于增加了结点的指针区域，空间开销比较大，但对空间使用相对灵活。</p>
+<!-- more -->
+<p>各种操作复杂度对比：<br>
+<img src="https://yeswhos.github.io//post-images/1594721019176.jpg" alt="" loading="lazy"><br>
+链表和顺序表在插入和删除时是不同的操作。<br>
+链表的主要耗时是遍历查找。<br>
+顺序表查找很快，主要耗时是拷贝覆盖操作。</p>
+<p>作用：<br>
+链表和顺序表这种一组序列元素的组织形式，可以成为线性表。一个线性表是某个元素的一个集合，还记录着元素之间的一种顺序关系。常被用做更复杂的数据结构的实现基础。<br>
+顺序表：将元素连续的存储到一块存储区中，元素间的顺序关系由它们的存储顺序自然表示。<br>
+链表：将元素存放在链构建的一系列存储块中。</p>
+<p>链表和顺序表解决的是数据如何存放的问题，所以能实现栈队列等数据结构。而栈队列指的是数据操作，具体实现还是通过链表或顺序表。</p>
+<p>Reference:</p>
+<ol>
+<li>https://www.bilibili.com/video/BV18W411T7Vv?p=15</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/ZPOzCeeQj/" class="tag">
+                    数据结构
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/shun-xu-biao-de-jie-gou-yu-shi-xian/">
+                  <h3 class="post-title">
+                    顺序表的结构与实现
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

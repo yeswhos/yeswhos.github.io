@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://yeswhos.github.io/</id>
+    <title>yeswhos</title>
+    <updated>2022-12-30T08:04:02.622Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://yeswhos.github.io/"/>
+    <link rel="self" href="https://yeswhos.github.io/atom.xml"/>
+    <subtitle>Of course, I still love you.</subtitle>
+    <logo>https://yeswhos.github.io/images/avatar.png</logo>
+    <icon>https://yeswhos.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, yeswhos</rights>
+    <entry>
+        <title type="html"><![CDATA[2022年度总结]]></title>
+        <id>https://yeswhos.github.io/post/2022-nian-du-zong-jie/</id>
+        <link href="https://yeswhos.github.io/post/2022-nian-du-zong-jie/">
+        </link>
+        <updated>2022-12-30T07:46:42.000Z</updated>
+        <summary type="html"><![CDATA[<p>测试</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>测试</p>
+<!-- more -->
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[测开面试]]></title>
+        <id>https://yeswhos.github.io/post/ce-kai-mian-shi/</id>
+        <link href="https://yeswhos.github.io/post/ce-kai-mian-shi/">
+        </link>
+        <updated>2021-05-31T11:37:16.000Z</updated>
+        <content type="html"><![CDATA[<p>1、用到了哪些库：比如OS，SYS，Datetime<br>
+2、re正则<br>
+3、http请求过程<br>
+4、列表切片的三个参数分别代表什么<br>
+5、线程进程协程<br>
+6、自动化测试的时候页面跳转空白怎么识别<br>
+7、游戏测试内容<br>
+8、super函数<br>
+9、__各种函数的用法</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Linux基础指令]]></title>
+        <id>https://yeswhos.github.io/post/linux-ji-chu-zhi-ling/</id>
+        <link href="https://yeswhos.github.io/post/linux-ji-chu-zhi-ling/">
+        </link>
+        <updated>2021-05-31T11:36:06.000Z</updated>
+        <content type="html"><![CDATA[<p>ls,help,cd,more,clear,mkdir,pwd,rm,grep,find,mv,su,date</p>
+<p>cat 用于在标准输出（监控器或屏幕）上查看文件内容<br>
+grep 在给定的文件中搜寻指定的字符串。<br>
+find 找指定名字的文件。<br>
+su 用于切换不同的用户。即使没有使用密码，超级用户也能切换到其它用户。<br>
+more显示文本内容<br>
+clear清楚屏幕<br>
+echo 输出字符串或提取Shell变量的值</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[懒加载和预加载]]></title>
+        <id>https://yeswhos.github.io/post/lan-jia-zai-he-yu-jia-zai/</id>
+        <link href="https://yeswhos.github.io/post/lan-jia-zai-he-yu-jia-zai/">
+        </link>
+        <updated>2021-05-31T11:34:34.000Z</updated>
+        <content type="html"><![CDATA[<p>1、懒加载：<br>
+由于界面图片太多或者其他因素，不能一次性加载完成。等待时间长会影响用户体验。<br>
+方法是监听页面滚动操作，判断懒加载的图片是否进入到了可视区域，如果图片在可视范围内，则将图片的src属性设回data-original的值而不是空字符串。<br>
+这样减少了无效资源的加载，防止并发加载的资源过多引发js的加载。</p>
+<p>2、预加载：<br>
+在网页全部加载之前，对一些主要内容进行加载，以提供给用户更好的体验，减少等待的时间。否则，如果一个页面的内容过于庞大，没有使用预加载技术的页面就会长时间的展现为一片空白，直到所有内容加载完毕。</p>
+<p>3、对比：<br>
+懒加载和预加载的对比<br>
+两者都是提高页面性能有效的办法，两者主要区别是一个是提前加载，一个是迟缓甚至不加载。懒加载对服务器前端有一定的缓解压力作用，预加载则会增加服务器前端压力。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[STAR法则]]></title>
+        <id>https://yeswhos.github.io/post/star-fa-ze/</id>
+        <link href="https://yeswhos.github.io/post/star-fa-ze/">
+        </link>
+        <updated>2021-05-31T11:32:35.000Z</updated>
+        <content type="html"><![CDATA[<p>STAR法则是情境(situation)、任务(task)、行动(action)、结果(result)四个英文单词首字母的合称。</p>
+<p>STAR法则最开始是面试官用来提问的一个逻辑框架，用来收集面试者与工作相关的具体信息和能力，后来这个方法也被越来越多的求职者用到简历中。</p>
+<p>情境(situation)：描述工作的背景，HR想知道为什么你会去做这件事？<br>
+任务(task)：你当时的任务是什么？HR想知道你是怎样在上述情境下明确自己的任务的。<br>
+行动(action)：你做了什么？HR要知道你为上边的任务所付出的行动，为什么这么做？还有其他方案吗？<br>
+结果(result)：结果怎样？从你的行动中，得到了什么？有没有完成目标呢？你获得了那些经验教训呢？之后有没有再用到那些经验呢？</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[B端和C端]]></title>
+        <id>https://yeswhos.github.io/post/b-duan-he-c-duan/</id>
+        <link href="https://yeswhos.github.io/post/b-duan-he-c-duan/">
+        </link>
+        <updated>2021-05-31T11:32:06.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="c端">C端：</h2>
+<p>Customer（Consumer），通常消费者，个人使用的终端，比如微信淘宝之类。<br>
+1、C端产品并没有明显的行业特征，比如微信社交、淘宝购物、美团点餐、高德导航，更多的是满足了使用者在“生活场景”下的各种个人日常需求。<br>
+2、C端产品的用户量级大而广，用户可具体到每一个“终端个体”，一般称之为“用户”。<br>
+3、C端产品大都免费开放给用户，在提供免费功能的基础上，再通过“拉新、留存、促活”等手段，转化其中一小部分用户。像漏斗模型一样，最终为服务付费的这部分用户为产品贡献了收益。这一切得益于C端产品大量级的用户规模，所以靠的是“规模经济”。<br>
+4、C端产品的用户虽然大致需求一致，但每个人的身份、年龄、兴趣、偏好都不尽相同，这就要求产品经理从众多终端用户中抽象出样本特征，形成不同的用户画像，有针对性地满足各类人群的个性需求。<br>
+5、对于C端产品而言，需要至少有一个核心的主要功能点能满足用户的某一项诉求。围绕这个具体的核心功能，再去考虑附加更好的用户体验和增值服务。</p>
+<h2 id="b端">B端</h2>
+<p>Business，通常为企业内部，或者商家使用的系统或者平台，如财务管理系统等。<br>
+1、B端产品通常行业特征相对明显，更多的是满足了企业相关用户在“工作场景”下完成协同工作的一些特定组织需求。<br>
+2、而B端产品的用户量级更小、相对也更垂直，用户类型通常是“组织群体”，包括决策者、管理者、普通员工，区别于一般“用户”，更多情况下是被称为“客户”。<br>
+3、B端产品没有用户量级上的优势，偏向于服务企业内部的工作协同，就需要为不同的生产关系和工作协作场景做个性化定制，靠企业对“定制付费”来获得收益。<br>
+4、而B端产品的用户量级小，但用户角色众多（决策者、管理者、普通员工），需要好好分析各角色的需求关注点，并做好角色分配和权限管理上的设计。<br>
+5、B端产品来说，要解决的主要是不同生产关系的协作沟通需求。在中心化的组织架构下，B端产品需要满足不同层级和组织内外的协作沟通，功能呈现模块化。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[黑盒白盒测试方法]]></title>
+        <id>https://yeswhos.github.io/post/hei-he-bai-he-ce-shi-fang-fa/</id>
+        <link href="https://yeswhos.github.io/post/hei-he-bai-he-ce-shi-fang-fa/">
+        </link>
+        <updated>2021-05-28T00:05:53.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="黑盒测试">黑盒测试</h2>
+<p>主要用于测试产品软件功能，无需关注内部实现和处理过程</p>
+<p>1、等价类划分：<br>
+将输入或者输出数据划分为若干等价类，每个等价类内测试结果相同。<br>
+如：选取从1-90的数，小于1和大于90为无效等价类，1-90的数为有效等价类</p>
+<p>2、边界值划分：<br>
+正好等于，刚刚大于或者刚刚小于边界值的数据作为测试数据</p>
+<p>3、判定表：<br>
+采用表格的形式，列出所有条件和结果的组合，做到无测试遗漏的覆盖。<br>
+适用于条件项各自独立，互不影响的情况。<br>
+技巧在于把条件划分清晰，对条件组合数量达到最小</p>
+<p>4、错误推断法：<br>
+基于经验和直觉推测可能存在的错误，从而有针对性。与测试经验库紧密相关。</p>
+<h2 id="白盒测试">白盒测试</h2>
+<p>根据被测程序的内部结构，设计测试用例的一种测试方法</p>
+<p>1、语句覆盖：<br>
+每个可执行的语句至少执行一次</p>
+<p>2、判定（分支覆盖）：<br>
+每个判断分支至少执行一次</p>
+<p>3、判定-条件覆盖：<br>
+每个判断的真假分支至少执行一次，每个条件的取值也至少执行一次</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[元素定位方法]]></title>
+        <id>https://yeswhos.github.io/post/css-yuan-su-ding-wei-fang-fa/</id>
+        <link href="https://yeswhos.github.io/post/css-yuan-su-ding-wei-fang-fa/">
+        </link>
+        <updated>2021-05-28T00:05:22.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="选择元素的基本方法">选择元素的基本方法</h2>
+<p>1、通过id来选择：<br>
+直接就find_element_by_id就完事了</p>
+<p>2、根据class属性，tag名来选择元素：<br>
+也好说，class就是find_element_by_class_name<br>
+tag就是find_element_by_tag_name<br>
+（如果有多个class或者tag，就是find elements，然后用for循环打印出来）</p>
+<p>3、获取网页上文本元素<br>
+定位到了文本的标签，然后print(webElement.text)即可，打印出网页元素文本</p>
+<p>4、find_element 和 find_elements 的区别<br>
+使用 find_elements 选择的是符合条件的 所有 元素， 如果没有符合条件的元素， 返回空列表<br>
+使用 find_element 选择的是符合条件的 第一个 元素， 如果没有符合条件的元素， 抛出 NoSuchElementException 异常</p>
+<p>5、webElement选择元素<br>
+👆上面的都是通过webDriver的方法选择元素，然后返回一个webElement对象。<br>
+通过webElement也可以选择元素，选择的结果就是该webElement范围内的子节点，可以进一步缩小范围。</p>
+<p>6、网页元素未加载出来，等待元素出现<br>
+wd.implicitly_wait(10)<br>
+如果找不到元素， 每隔 半秒钟 再去界面上查看一次， 直到找到该元素， 或者 过了10秒 最大时长。</p>
+<h2 id="css选择元素">CSS选择元素</h2>
+<p>1、CSS Selector 语法就是用来选择元素的。<br>
+通用的方法：<br>
+通过 CSS Selector 选择单个元素的方法是<br>
+find_element_by_css_selector(CSS Selector参数)</p>
+<pre><code>选择所有元素的方法是
+find_elements_by_css_selector(CSS Selector参数)
+</code></pre>
+<p>2、根据tag，class，id选取元素：<br>
+tag名就直接往上写名就行：div<br>
+class写之前加点：.class<br>
+id前面加上# : #id</p>
+<p>3、子元素和后代元素：<br>
+1、如果 inner 是 outer 的 直接子元素， CSS Selector 选择子元素的语法是这样的：outer &gt; inner<br>
+2、也支持更多层级的选择， 比如：元素1 &gt; 元素2 &gt; 元素3 &gt; 元素4<br>
+就是选择 元素1 里面的子元素 元素2 里面的子元素 元素3 里面的子元素 元素4 ， 最终选择的元素是 元素4<br>
+3、如果 inner 是 outer 的 后代元素， CSS Selector 选择后代元素的语法是这样：outer inner<br>
+（后代元素，不一定非得是直接子元素）<br>
+4、也支持更多层级的选择， 比如：元素1   元素2   元素3  元素4<br>
+最终选择的元素是 元素4</p>
+<p>4、根据属性值来选择，或者是属性：<br>
+1、根据属性值用[]，比如 [class='class_name']<br>
+2、根据属性也是用[]，比如 [class]<br>
+3、还可以用属性值以什么什么开头来选取元素，比如：a[href^=&quot;http&quot;]，就是属性值以http开头的<br>
+4、还可以 选择 属性值 以某个字符串 结尾 的元素,比如， 要选择a节点，里面的href属性以 gov.cn 结尾 ，就可以这样写 a[href$=&quot;gov.cn&quot;]<br>
+5、如果一个元素具有多个属性，CSS 选择器 可以指定 选择的元素要 同时具有多个属性的限制，比如： div[class=misc][ctype=gun]</p>
+<p>5、按照次序选择子节点：<br>
+我们可以指定选择的元素 是父元素的第几个子节点<br>
+1、nth-child<br>
+所以这样可以这样写 span:nth-child(2)，就是父节点下第二个且为span类型的子节点<br>
+如果不想加节点限制，可以写:nth-child(2)，就是父节点下任意一个类型的第二个元素<br>
+2、p:nth-last-child(1)<br>
+就是父节点倒数第二个且为p的子节点<br>
+3、span:nth-of-type(1)<br>
+就是父节点第二个为span的子节点<br>
+4、span:nth-last-of-type(1)<br>
+就是父节点倒数第二个为span的子节点<br>
+5、p:nth-child(even)<br>
+父类元素的偶数节点且类型为p<br>
+6、p:nth-child(odd)<br>
+父类元素的奇数节点且类型为p<br>
+7、兄弟节点的选择：<br>
+h3 + span就是选择 h3 后面紧跟着的兄弟节点 span。<br>
+选择 h3 后面所有的兄弟节点 span，可以这样写 h3 ~ span<br>
+8、option，h4相当于两个标签的元素都选择，关键在逗号</p>
+<p>6、区别：<br>
+xpath可以选择范围，比如前三个元素，css只能选择第几第几个元素<br>
+xpath可以选择前节点，css不能选择前面的兄弟节点</p>
+<h2 id="xpath选择元素">xpath选择元素</h2>
+<p>1、下面的东西都是用这个方法 elements = driver.find_elements_by_xpath(&quot;/html/body/div&quot;)<br>
+2、相对路径用//。//div//p和//div/p的区别就是，第一个是div下面所有的子节点中的p标签，第二个是直接子节点是p标签的。<br>
+3、通配符：<em>，比如//div/<em>就是div下面的所有子节点<br>
+4、根据属性值，属性，id选择。[@属性名='属性值']，[@id='id'],[@class].<br>
+或者p标签页下的一个class，就是//p[@class=&quot;capital huge-city&quot;]<br>
+5、属性值包含字符串：<br>
+包含某个字符串：//</em>[contains(@style,'color']<br>
+以某个字符串开头：//[starts-with(@style,'color')]<br>
+6、按次序选择：<br>
+第二个p类型的子元素：//p[2]<br>
+div中第二个p类型的子元素：//div/p[2]<br>
+div的第二个任意类型的元素：//div/</em>[2]<br>
+p的倒数第1个元素：//p[last()]<br>
+p的倒数第2个元素：//p[last()-1]<br>
+option前两个子元素：//option[position()&lt;=2]<br>
+选择属性值的倒数前两个的子元素：//[@class='mutili-choice']//option[position()&gt;=last()-2]<br>
+7、组选择：<br>
+//option | //p，两个标签的都会选<br>
+等同于CSS选择器option , h4</p>
+<p>8、选择父节点：<br>
+就是/..，比如//*[@id='china']/..</p>
+<p>9、选择single choice 后续的兄弟节点//<em>[@class='single_choice']/following-sibling::</em><br>
+选择前面的兄弟节点就是：preceding-sibling::</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[个人对测试的一些总结]]></title>
+        <id>https://yeswhos.github.io/post/ge-ren-dui-ce-shi-de-yi-xie-zong-jie/</id>
+        <link href="https://yeswhos.github.io/post/ge-ren-dui-ce-shi-de-yi-xie-zong-jie/">
+        </link>
+        <updated>2021-05-28T00:04:50.000Z</updated>
+        <content type="html"><![CDATA[<p>1、印象最深的bug：<br>
+夏令时，手动选择设备时间，在设备即将进入夏令时的时候，日历面板会多出一个时间，比如选择英国UTC+0时区，3月24号01:00的时候，进入到夏令时后，日历面板会出现两个24号。<br>
+影响：导致时间不正确，而且日历面板星期对应不正确，而且当月日期应该标重显示，这时也显示错误。<br>
+原因：固有问题，日历控件算法有误。<br>
+回归测试策略：检查界面所有涉及到时间及日历面板的特性。测试进入夏令时，出夏令时是否正确显示；有夏令时的时区和无夏令时时区；UTC为正的时区，UTC为负的时区；进入夏令时时间在出夏令时时间之后，进入夏令时在出夏令时时间之前的时区；客户端时间为夏令时时区，设备时间为非夏令时时区，设备时间为夏令时时区，设备时间为非夏令时时区等<br>
+测试用例补充：之前的继承功能，且没有相关夏令时出入点的用例，增加原场景回归用例。<br>
+思考：测试用例覆盖遗漏，测试的时候不够发散，这种动态设计到时间的时候，最好也考虑边界的情况，尤其是时间跳变。并且增加夏令时到专项测试，也就是每个需求涉及到时间的都需要单独测试夏令时是否功能正常。衍生产品的夏令时可能存在问题，比如给客户演示的DEMO，并且也提前在DEMO上线前发现夏令时类似的问题。</p>
+<p>2、测试报告：<br>
+包含对应的开发和测试责任人，如果某个需求设计多个开发和测试团队，需要写明自己的团队及对应的开发。还有交付质量（良好，一般，差）。发现的问题（包括问题单号，是否上库前解决，责任人，描述）。转测试时间（开始，结束时间）</p>
+<p>3、测试用例：<br>
+用例归档目录，用例编号，用例名称，用例级别（1基本功能，2场景验证，3异常场景），用例前提，用例步骤，用例预期结果，备注，用例自动化实现情况，用例所属版本，测试结果。</p>
+<p>4、测试排期：<br>
+需求澄清阶段，根据开发预计代码量预估测试工作量<br>
+需求串讲阶段，测试反串讲，根据测试策略和用例数量，以及预计转测试时间，预估测试工作量，如1人/天。</p>
+<p>5、测试策略设计的几个要素：<br>
+功能测试：设备形态差异，功能测试，异常场景测试，场景测试，专项测试（包括权限，license，英文，UI/UCD，升级，错误码，OEM白牌化，夏令时，CLI，浏览器兼容性，大规格，交叉测试），串讲及反串讲的遗留问题</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[测试类型]]></title>
+        <id>https://yeswhos.github.io/post/ce-shi-lei-xing/</id>
+        <link href="https://yeswhos.github.io/post/ce-shi-lei-xing/">
+        </link>
+        <updated>2021-05-26T20:08:42.000Z</updated>
+        <content type="html"><![CDATA[<p>大致测试方法可分为：单元测试，集成测试，系统测试，验收测试，回归测试</p>
+<p>1、单元测试：<br>
+完成最小的软件设计单元的验证工作，目的是保证模块被正确的编码。通常情况下是白盒的，对代码规则，程序设计，代码逻辑进行静态测试。一般由开发人员进行单元测试。</p>
+<p>2、集成测试：<br>
+把单元测试后的模块进行测试，构造模块的集成。一般避免一次性集成而是采用增量集成。<br>
+主要是发现与模块接口有关的问题。<br>
+集成方式：<br>
+1、自顶向下集成：首先集成主模块，然后按照控制层次向下集成，按照集成方式集成到整个结构中。<br>
+2、自底向上集成：从子模块进行构造和测试，因为模块也是自底向上的，所以进行时要求隶属于某个给顶层的模块总是存在的</p>
+<p>3、系统测试：<br>
+基于系统整体需求说明的黑盒测试，应覆盖系统其他部件。<br>
+系统测试是针对整个产品的测试，验证是否满足规格和需求，或找出与需求设计相矛盾的地方。<br>
+因此需将系统中的软件与各种依赖资源结合起来，在系统实际运行环境下进行测试。<br>
+（测试也大部分在做的是系统测试）</p>
+<p>4、回归测试：<br>
+是指发生修改之后，重新测试先前的用例以保证修改的正确性。<br>
+理论上，在软件产生新版本，都需要进行回归测试，以保证之前的缺陷在现在不会出现。<br>
+以及修复好缺陷之后再重新进行测试。<br>
+目的：在于验证之前已经出现过，但修复好的缺陷这次不再出现，一般指对某已知修正的缺陷再次围绕它原来出现时的步骤重新测试。</p>
+<p>5、验收测试：<br>
+相关用户根据测试计划和结果对系统进行验收测试。让用户决定是否接受该系统，确定产品是否满足合同或者用户所规定需求的测试。</p>
+<p>6、冒烟测试：<br>
+完成一个新版本开发之后做的最基本的功能测试，如果通过测试才会进行下一步的测试（功能测试，集成测试，系统测试等等）。目的是减少测试成本。</p>
+]]></content>
+    </entry>
+</feed>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>元素定位方法 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="选择元素的基本方法
+1、通过id来选择：
+直接就find_element_by_id就完事了
+2、根据class属性，tag名来选择元素：
+也好说，class就是find_element_by_class_name
+tag就是find_el..." />
+    <meta name="keywords" content="AutoTest" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">元素定位方法</h2>
+            <div class="post-date">2021-05-28</div>
+            
+            <div class="post-content" v-pre>
+              <h2 id="选择元素的基本方法">选择元素的基本方法</h2>
+<p>1、通过id来选择：<br>
+直接就find_element_by_id就完事了</p>
+<p>2、根据class属性，tag名来选择元素：<br>
+也好说，class就是find_element_by_class_name<br>
+tag就是find_element_by_tag_name<br>
+（如果有多个class或者tag，就是find elements，然后用for循环打印出来）</p>
+<p>3、获取网页上文本元素<br>
+定位到了文本的标签，然后print(webElement.text)即可，打印出网页元素文本</p>
+<p>4、find_element 和 find_elements 的区别<br>
+使用 find_elements 选择的是符合条件的 所有 元素， 如果没有符合条件的元素， 返回空列表<br>
+使用 find_element 选择的是符合条件的 第一个 元素， 如果没有符合条件的元素， 抛出 NoSuchElementException 异常</p>
+<p>5、webElement选择元素<br>
+👆上面的都是通过webDriver的方法选择元素，然后返回一个webElement对象。<br>
+通过webElement也可以选择元素，选择的结果就是该webElement范围内的子节点，可以进一步缩小范围。</p>
+<p>6、网页元素未加载出来，等待元素出现<br>
+wd.implicitly_wait(10)<br>
+如果找不到元素， 每隔 半秒钟 再去界面上查看一次， 直到找到该元素， 或者 过了10秒 最大时长。</p>
+<h2 id="css选择元素">CSS选择元素</h2>
+<p>1、CSS Selector 语法就是用来选择元素的。<br>
+通用的方法：<br>
+通过 CSS Selector 选择单个元素的方法是<br>
+find_element_by_css_selector(CSS Selector参数)</p>
+<pre><code>选择所有元素的方法是
+find_elements_by_css_selector(CSS Selector参数)
+</code></pre>
+<p>2、根据tag，class，id选取元素：<br>
+tag名就直接往上写名就行：div<br>
+class写之前加点：.class<br>
+id前面加上# : #id</p>
+<p>3、子元素和后代元素：<br>
+1、如果 inner 是 outer 的 直接子元素， CSS Selector 选择子元素的语法是这样的：outer &gt; inner<br>
+2、也支持更多层级的选择， 比如：元素1 &gt; 元素2 &gt; 元素3 &gt; 元素4<br>
+就是选择 元素1 里面的子元素 元素2 里面的子元素 元素3 里面的子元素 元素4 ， 最终选择的元素是 元素4<br>
+3、如果 inner 是 outer 的 后代元素， CSS Selector 选择后代元素的语法是这样：outer inner<br>
+（后代元素，不一定非得是直接子元素）<br>
+4、也支持更多层级的选择， 比如：元素1   元素2   元素3  元素4<br>
+最终选择的元素是 元素4</p>
+<p>4、根据属性值来选择，或者是属性：<br>
+1、根据属性值用[]，比如 [class='class_name']<br>
+2、根据属性也是用[]，比如 [class]<br>
+3、还可以用属性值以什么什么开头来选取元素，比如：a[href^=&quot;http&quot;]，就是属性值以http开头的<br>
+4、还可以 选择 属性值 以某个字符串 结尾 的元素,比如， 要选择a节点，里面的href属性以 gov.cn 结尾 ，就可以这样写 a[href$=&quot;gov.cn&quot;]<br>
+5、如果一个元素具有多个属性，CSS 选择器 可以指定 选择的元素要 同时具有多个属性的限制，比如： div[class=misc][ctype=gun]</p>
+<p>5、按照次序选择子节点：<br>
+我们可以指定选择的元素 是父元素的第几个子节点<br>
+1、nth-child<br>
+所以这样可以这样写 span:nth-child(2)，就是父节点下第二个且为span类型的子节点<br>
+如果不想加节点限制，可以写:nth-child(2)，就是父节点下任意一个类型的第二个元素<br>
+2、p:nth-last-child(1)<br>
+就是父节点倒数第二个且为p的子节点<br>
+3、span:nth-of-type(1)<br>
+就是父节点第二个为span的子节点<br>
+4、span:nth-last-of-type(1)<br>
+就是父节点倒数第二个为span的子节点<br>
+5、p:nth-child(even)<br>
+父类元素的偶数节点且类型为p<br>
+6、p:nth-child(odd)<br>
+父类元素的奇数节点且类型为p<br>
+7、兄弟节点的选择：<br>
+h3 + span就是选择 h3 后面紧跟着的兄弟节点 span。<br>
+选择 h3 后面所有的兄弟节点 span，可以这样写 h3 ~ span<br>
+8、option，h4相当于两个标签的元素都选择，关键在逗号</p>
+<p>6、区别：<br>
+xpath可以选择范围，比如前三个元素，css只能选择第几第几个元素<br>
+xpath可以选择前节点，css不能选择前面的兄弟节点</p>
+<h2 id="xpath选择元素">xpath选择元素</h2>
+<p>1、下面的东西都是用这个方法 elements = driver.find_elements_by_xpath(&quot;/html/body/div&quot;)<br>
+2、相对路径用//。//div//p和//div/p的区别就是，第一个是div下面所有的子节点中的p标签，第二个是直接子节点是p标签的。<br>
+3、通配符：<em>，比如//div/<em>就是div下面的所有子节点<br>
+4、根据属性值，属性，id选择。[@属性名='属性值']，[@id='id'],[@class].<br>
+或者p标签页下的一个class，就是//p[@class=&quot;capital huge-city&quot;]<br>
+5、属性值包含字符串：<br>
+包含某个字符串：//</em>[contains(@style,'color']<br>
+以某个字符串开头：//[starts-with(@style,'color')]<br>
+6、按次序选择：<br>
+第二个p类型的子元素：//p[2]<br>
+div中第二个p类型的子元素：//div/p[2]<br>
+div的第二个任意类型的元素：//div/</em>[2]<br>
+p的倒数第1个元素：//p[last()]<br>
+p的倒数第2个元素：//p[last()-1]<br>
+option前两个子元素：//option[position()&lt;=2]<br>
+选择属性值的倒数前两个的子元素：//[@class='mutili-choice']//option[position()&gt;=last()-2]<br>
+7、组选择：<br>
+//option | //p，两个标签的都会选<br>
+等同于CSS选择器option , h4</p>
+<p>8、选择父节点：<br>
+就是/..，比如//*[@id='china']/..</p>
+<p>9、选择single choice 后续的兄弟节点//<em>[@class='single_choice']/following-sibling::</em><br>
+选择前面的兄弟节点就是：preceding-sibling::</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/JnQKpe17s/" class="tag">
+                    AutoTest
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/ge-ren-dui-ce-shi-de-yi-xie-zong-jie/">
+                  <h3 class="post-title">
+                    个人对测试的一些总结
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

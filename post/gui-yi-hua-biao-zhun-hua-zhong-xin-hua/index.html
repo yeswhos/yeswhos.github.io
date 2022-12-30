@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>归一化，标准化，中心化 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Normalization, Standardization, Zero-centered
+
+归一化：把数据映射成（0， 1）或者（1， 1）之间的小数，主要是为了数据处理方便，简化的计算方式。
+标准化：机器学习中有的数据可能是高维的，标准..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">归一化，标准化，中心化</h2>
+            <div class="post-date">2020-07-26</div>
+            
+            <div class="post-content" v-pre>
+              <p>Normalization, Standardization, Zero-centered</p>
+<!-- more -->
+<p>归一化：把数据映射成（0， 1）或者（1， 1）之间的小数，主要是为了数据处理方便，简化的计算方式。<br>
+标准化：机器学习中有的数据可能是高维的，标准化后会使每个特征中的熟知的平均变为0（将每个特征的值都减掉原始资料中该特征的平均），标准差变为1.<br>
+中心化：平均值为0， 对标准差无要求。</p>
+<p>区别：</p>
+<ol>
+<li>归一化是将样本中的特征值映射到一定的区间。而标准化是依照特征矩阵的列处理数据，转化成标准的正态分布，和整体样本分布有关。相同点在于都是线性变换，都是按照向量x按照比例压缩再平移。</li>
+<li>标准化是原始分数减去平均数然后除以标准差，中心化是原始分数减去平均数。所以一般是先中心化再标准化。</li>
+</ol>
+<p>作用：</p>
+<ol>
+<li>使用梯度下降方法求解最优化的时候，归一化/标准化可以加快梯度下降的求解速度，即提升模型收敛速度。如下图：<br>
+<img src="https://yeswhos.github.io//post-images/1595759342791.jpg" alt="" loading="lazy"></li>
+<li>避免数值太大引起的问题。</li>
+<li>无量纲化，也就是去数值的单位。</li>
+</ol>
+<p>Reference：</p>
+<ol>
+<li>https://www.jianshu.com/p/95a8f035c86c</li>
+<li>https://blog.csdn.net/young951023/article/details/78389445</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/jun-zhi-qi-wang-fang-chai-biao-zhun-chai-xie-fang-chai/">
+                  <h3 class="post-title">
+                    均值，期望，方差，标准差，协方差，均方差，均方误差
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

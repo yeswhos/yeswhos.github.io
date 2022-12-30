@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>P，NP，NP-Hard，NPC问题 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="算法中常见的多项式以及非确定多项式等问题概念。
+
+前置概念：
+
+多项式 polynomial： ，这种形式的为X的最高位为n的多项式。
+时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。
+比如冒泡排序时间复杂度为O(n ** 2..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">P，NP，NP-Hard，NPC问题</h2>
+            <div class="post-date">2020-07-08</div>
+            
+            <div class="post-content" v-pre>
+              <p>算法中常见的多项式以及非确定多项式等问题概念。</p>
+<!-- more -->
+<p>前置概念：</p>
+<ol>
+<li>多项式 polynomial：<img src="https://yeswhos.github.io//post-images/1594371847424.jpg" alt="" loading="lazy"> ，这种形式的为X的最高位为n的多项式。</li>
+<li>时间复杂度：定义为随着问题规模的增大，算法执行时间增长的快慢。<br>
+比如冒泡排序时间复杂度为O(n ** 2)，取最高次，是一个时间复杂度为多项式的表达方式。</li>
+<li>多项式时间复杂度：如n ** k （k为常数）。对应的非多项式时间复杂度，k  * * n （k为常数且大于1），或者n!（阶乘时间复杂度），都成为指数型时间复杂度。</li>
+<li>约化 Reducibility：一个问题A可约化为B的含义是，可以用问题B的解法来解决问题A。换个说法是B的时间复杂度高于或者等于问题A。</li>
+</ol>
+<p>正文：</p>
+<ol>
+<li>P问题：存在多项式时间算法的方式，也就是该问题可以用多项式算法计算，然后得到结果的问题。</li>
+<li>NP问题 Nondeterministic polynomial：非确定多项式问题。能在多项式时间内验证得出一个正确解的问题。<br>
+换种说法就是，有一个问题，假设你得到了问题的解，要验证是否正确。验证的是验证花费的时间是多项式时间，至于求解所花的时间是不是多项式无所谓，可能有多项式，可能没有，也可能不知道。<br>
+P问题是NP问题的子集，即存在多项式时间算法的问题，总能在多项式时间内验证他。<br>
+NP问题，不知道这个问题是否存在多项式时间解，但可以在多项式时间内来验证并得到这个问题得一个正确解。</li>
+<li>NPC问题 Nondeterministic polynomial complete：存在一个NP问题，所有NP问题都可以约化成他，也就是只要解决了这个问题，所有的NP问题也就解决了。定义满足两个条件：该问题是NP问题；所有NP问题都可以约化成该问题。</li>
+<li>NP-Hard问题： 所有NP都可以约化成它，（在多项式时间内）但它不一定是一个NP问题。NP-Hard范围比NPC还要广。</li>
+<li>TSP问题 Travel Salesman Problem：一个推销员，要到n个城市推销商品，要找出包括n个城市的环路。用枚举的方法来说，这个路线有(n - 1)!种，为阶乘算法。所以是NP问题。因为给出一个任意的路径，能够得到该路径的开销，但是求解对比所有可能的旅行路径是不知道存不存在一个多项式解，所以再一次为NP问题。</li>
+</ol>
+<p>Reference：</p>
+<ol>
+<li>https://zhuanlan.zhihu.com/p/70305881</li>
+<li>https://blog.csdn.net/bitcarmanlee/article/details/51935400</li>
+<li>https://zhuanlan.zhihu.com/p/73953567</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

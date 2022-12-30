@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>性能度量 performance measure | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="对学习器的泛化性能进行评估，不仅需要有有效可行的实验估计方法，还需要有衡量模型泛化能力的评价标准。
+
+回归任务最常用的度量性能为均方误差 mean squared error
+错误率和精度，是分类任务中最常用的两种性能度量，即适用于二分类任..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">性能度量 performance measure</h2>
+            <div class="post-date">2020-07-12</div>
+            
+            <div class="post-content" v-pre>
+              <p>对学习器的泛化性能进行评估，不仅需要有有效可行的实验估计方法，还需要有衡量模型泛化能力的评价标准。</p>
+<!-- more -->
+<p>回归任务最常用的度量性能为均方误差 mean squared error</p>
+<p>错误率和精度，是分类任务中最常用的两种性能度量，即适用于二分类任务，也适用于多任务分类任务。<br>
+错误率是分类错误的样本占样本总数的比例，精度则是分类正确的样本数占样本总数的比例。</p>
+<p>查准率precision与查全率recall也是一种性能度量方式。<br>
+对于二分类问题，可将样例根据其真是类别与学习器预测类别的组合划分为下面几种。<br>
+TP：正确地标记为正，即算法预测它为好西瓜，这个西瓜真实情况也是好西瓜（双重肯定是肯定）；<br>
+FP：错误地标记为正，即算法预测它是好西瓜，但这个西瓜真实情况是坏西瓜；<br>
+FN：错误地标记为负，即算法预测为坏西瓜，（F算法预测的不对）但这个西瓜真实情况是好西瓜（双重否定也是肯定）；<br>
+TN：正确地标记为负，即算法标记为坏西瓜，（T算法预测的正确）这个西瓜真实情况是坏西瓜。</p>
+<figure data-type="image" tabindex="1"><img src="https://yeswhos.github.io//post-images/1594631894689.png" alt="" loading="lazy"></figure>
+<p>查准率和查全率往往是相互矛盾的度量。例如，希望好瓜尽可能多的选出来，则可通过增加选瓜的数量来实现。如果将所有的西瓜都选上，那么所有的好瓜也就选上了。而相反，如果希望好瓜比例尽量高，只挑选最有把握的瓜，就会漏掉不少好瓜。<br>
+以查准率，查全率为轴，可以得到P-R曲线。如图：<br>
+<img src="https://yeswhos.github.io//post-images/1594632240156.jpg" alt="" loading="lazy"><br>
+如果一个学习器的P-R曲线被另一个学习器的曲线抱住，就可以说后者的性能要优于前者。<br>
+还有一些基于P-R图的性能度量：</p>
+<ol>
+<li>平衡点 Break-Even Point：查准率=查全率，越高的性能越好。</li>
+<li>F1度量，更常用，越大的性能越好。<br>
+<img src="https://yeswhos.github.io//post-images/1594632460074.png" alt="" loading="lazy"></li>
+<li>实际应用中根据不同的需要也会考虑更偏向于P还是R，比如逃犯信息检索系统中，更希望尽量少的漏掉逃犯，此时的查全率比较重要。体现在F1上面就是这样：<br>
+<img src="https://yeswhos.github.io//post-images/1594632535266.png" alt="" loading="lazy"></li>
+</ol>
+<p>Reference:</p>
+<ol>
+<li>西瓜书</li>
+<li>https://blog.csdn.net/qq_27871973/article/details/81065074</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/lian-biao-linked-list/">
+                  <h3 class="post-title">
+                    链表 Linked list
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

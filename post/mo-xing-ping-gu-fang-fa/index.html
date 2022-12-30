@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>模型评估方法 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1672386460980">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="对于模型选择问题，理想的解决方案是对候选模型的泛化误差进行评估，然后选择泛化误差最小的模型。但无法直接获得泛化误差，训练误差又由于过拟合现象不适合作为标准。
+
+通常选择模型是通过实验测试来对学习器的泛化误差进行评估进而做出选择。为此，需要一..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1672386460980" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">模型评估方法</h2>
+            <div class="post-date">2020-07-13</div>
+            
+            <div class="post-content" v-pre>
+              <p>对于模型选择问题，理想的解决方案是对候选模型的泛化误差进行评估，然后选择泛化误差最小的模型。但无法直接获得泛化误差，训练误差又由于过拟合现象不适合作为标准。</p>
+<!-- more -->
+<p>通常选择模型是通过实验测试来对学习器的泛化误差进行评估进而做出选择。为此，需要一个与训练集不同的测试集来测试学习器对新样本的判别能力，然后用测试误差来作为泛化误差的近似。<br>
+然而只有一个包含m个样例的数据集。要训练和测试集，如何分配，有下面三种方法。</p>
+<ol>
+<li>
+<p>留出法 hold-out<br>
+直接将数据集划分为两个互斥的集合，然后测试集对泛化误差进行估计。常见的做法是将大约2/3-4/5的样本用于训练，剩余样本进行测试。<br>
+留一法使用的训练集与初始数据集相比只少了一个样本，所以评估模型与期望评估用的训练集训练的模型很相似，所以留一法的评估往往比较准确。<br>
+但是数据集较大的时候，训练m个模型的计算也是很大的。同样NFL定理也适用。</p>
+</li>
+<li>
+<p>交叉验证法 cross validation<br>
+将数据集划分为k个大小相似的互斥子集，每个子集尽可能保持数据分布的一致性，即从数据集分层采样得到。然后每次用k - 1个子集的并集作为训练集，每个子集的一个作为测试集，从而进行k次训练。<br>
+一般这种验证方法也成为k折交叉验证 k-fold cross validation。<br>
+<img src="https://yeswhos.github.io//post-images/1594630480396.jpg" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>自助法 bootstrapping<br>
+适用于样本较少的情况，基本思想就是重复采样。<br>
+比如我们有m个样本（m较小），每次在这m个样本中随机采集一个样本，放入训练集，采样完后把样本放回。这样重复采集m次，我们得到m个样本组成的训练集。当然，这m个样本中很有可能有重复的样本数据。同时，用原始的m个样本做测试集。这样接着进行交叉验证。由于我们的训练集有重复数据，这会改变数据的分布，因而训练结果会有估计偏差，因此，此种方法不是很常用，除非数据量真的很少，比如小于20个。</p>
+</li>
+</ol>
+<p>Reference:</p>
+<ol>
+<li>西瓜书</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/xing-neng-du-liang-performance-measure/">
+                  <h3 class="post-title">
+                    性能度量 performance measure
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
