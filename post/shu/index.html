@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>树 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="是一种抽象数据类型（ADT）的数据结构，用来模拟具有树状结构性质的数据集合。它由n（n &gt;= 1）个有限节点组成的一个具有层次关系的集合。
+
+树具有以下特点：
+
+每个节点有0个或者多个子节点
+没有父节点的节点成为根节点
+每个非根节点有..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">树</h2>
+            <div class="post-date">2020-07-21</div>
+            
+            <div class="post-content" v-pre>
+              <p>是一种抽象数据类型（ADT）的数据结构，用来模拟具有树状结构性质的数据集合。它由n（n &gt;= 1）个有限节点组成的一个具有层次关系的集合。</p>
+<!-- more -->
+<p>树具有以下特点：</p>
+<ol>
+<li>每个节点有0个或者多个子节点</li>
+<li>没有父节点的节点成为根节点</li>
+<li>每个非根节点有且只有一个父节点</li>
+<li>除了根节点以外，每个子结点可以分为多个不相交的子树。<br>
+<img src="https://yeswhos.github.io//post-images/1595322824478.jpg" alt="" loading="lazy"></li>
+</ol>
+<p>树的术语：<br>
+<img src="https://yeswhos.github.io//post-images/1595322875525.jpg" alt="" loading="lazy"><br>
+有的术语我也没听说过，用到的不多。</p>
+<p>树的种类：<br>
+<img src="https://yeswhos.github.io//post-images/1595322940318.jpg" alt="" loading="lazy"></p>
+<p>二叉树通常以链表形式存储。</p>
+<p>应用场景：</p>
+<ol>
+<li>xml， html等用到树</li>
+<li>路由协议用到树</li>
+<li>mysql数据库用到树</li>
+<li>文件系统的目录结构用到树</li>
+<li>AI算法都是树搜索，也包括decision tree</li>
+</ol>
+<p>Reference:<br>
+https://www.bilibili.com/video/BV18W411T7Vv?p=39</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/sou-suo/">
+                  <h3 class="post-title">
+                    搜索
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

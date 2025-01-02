@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>时间复杂度 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="算法在解决问题时候会消耗资源和时间，而这也是衡量算法优劣的指标，也就是从时间和空间两个方面考量。下面只讲时间复杂度，是指当前算法所消耗的时间。
+
+大O表示法：
+算法的渐进时间复杂度。我的理解大O法是简化了时间复杂度，并不关心一些细微的代码执..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">时间复杂度</h2>
+            <div class="post-date">2020-07-12</div>
+            
+            <div class="post-content" v-pre>
+              <p>算法在解决问题时候会消耗资源和时间，而这也是衡量算法优劣的指标，也就是从时间和空间两个方面考量。下面只讲时间复杂度，是指当前算法所消耗的时间。</p>
+<!-- more -->
+<p>大O表示法：<br>
+算法的渐进时间复杂度。我的理解大O法是简化了时间复杂度，并不关心一些细微的代码执行步骤。比如   math.pow(n, 3) * 2 + 1表示即为n的3次方。忽略系数也是用来强调表示代码执行时间的增长变化趋势。比如可以画出来n的3次方以及n的2次方之类的函数图，来观察趋势。而前面的系数对趋势没有太大的影响。</p>
+<p>衡量时间复杂度的三种：<br>
+最优时间复杂度：算法完成工作最少需要多少操作，比如排序算法，只排很少的数字。只考虑最乐观的情况，所以参考意义不大。<br>
+最坏时间复杂度：算法完成工作最多需要多少操作。表示该算法在一定时间保证能完成工作。也是最关注的算法评估方法。<br>
+平均时间复杂度：算法完成工作平均需要多少操作。是个对算法的全面评价，但平均时间也有些困难去计算。因为算法实例分布不均等原因。</p>
+<p>时间复杂度计算的基本规则：</p>
+<ol>
+<li>基本操作，只有常数项，时间复杂度为O(1)</li>
+<li>顺序结构，时间复杂度按加法计算</li>
+<li>循环结构，时间复杂度按乘法计算</li>
+<li>分支结构，时间复杂度取最大值</li>
+<li>判断算法效率时，往往只关注操作量最高的次数，其他次要项以及常数项可以忽略</li>
+<li>算法时间复杂度一般都指最坏时间复杂度。</li>
+</ol>
+<p><img src="https://yeswhos.github.io//post-images/1594547958613.jpg" alt="" loading="lazy"><br>
+<img src="https://yeswhos.github.io//post-images/1594549787993.jpg" alt="" loading="lazy"></p>
+<p>Reference:</p>
+<ol>
+<li>https://www.bilibili.com/video/BV1fW411u7zU?p=4</li>
+<li>https://zhuanlan.zhihu.com/p/50479555</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/ao-qia-mu-ti-dao-occams-razor/">
+                  <h3 class="post-title">
+                    奥卡姆剃刀 Occam&#39;s razor
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

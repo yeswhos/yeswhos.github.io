@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>软件开发模型及阶段 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="模型
+软件开发的流程大概是：
+1、首先产品经理出产品需求，并进行需求评审（需求澄清），需要拉上开发，测试，产品，UI
+2、开发编写代码，此时测试编写测试用例（需求串讲）
+3、进行测试用例评审。（测试策略反串讲）
+4、开发人员联调自测后提测（..." />
+    <meta name="keywords" content="测试" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">软件开发模型及阶段</h2>
+            <div class="post-date">2021-05-26</div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="模型">模型</h1>
+<p>软件开发的流程大概是：<br>
+1、首先产品经理出产品需求，并进行需求评审（需求澄清），需要拉上开发，测试，产品，UI<br>
+2、开发编写代码，此时测试编写测试用例（需求串讲）<br>
+3、进行测试用例评审。（测试策略反串讲）<br>
+4、开发人员联调自测后提测（开发自测）<br>
+5、测试人员进行冒烟测试（转测试）<br>
+6、给出质量和测试报告，上线发版</p>
+<p>另外，软件开发（测试）流程有V模型和W模型之分，V模型主要是测试过程加在开发过程的后半段，而W模型是测试提前，甚至和开发是同步进行，测试不仅是程序，还包括需求和设计。W模型有利于尽早地全面的发现问题，降低软件开发的成本，风险前置。</p>
+<h2 id="v模型">V模型</h2>
+<p>1、过程：<br>
+用户需求，需求分析，概要设计，详细设计，编码（编码在最底层）<br>
+单元测试，集成测试，系统测试，验收测试</p>
+<p>2、优点：<br>
+左端表示传统的瀑布开发模型，右端明确的把测试分成了不同的级别或者阶段，测试过程更加具体<br>
+测试的各个阶段和开发的各个阶段相对应<br>
+模型测试策略包括底层和高层测试，底层测试是为了源代码的正确性，高层测试是为了整个系统满足用户的需求</p>
+<p>3、缺点：<br>
+测试的对象是程序本身，缺少了测试活动对需求分析，系统设计等验证和确认，直到后面的验收测试才能发现。<br>
+测试属于了开发之后的一个阶段，最晚的一个阶段。实际应用中容易导致需求阶段的错误一直到最后才发现。</p>
+<h2 id="w模型">W模型</h2>
+<p>1、过程：<br>
+就是两个V叠加在一起<br>
+左边V：需求分析，概要设计，详细设计，编码实现，模块集成，系统构建，系统安装<br>
+右边V：需求测试，概要设计测试，详细设计测试，单元测试，集成测试，系统测试，验收测试</p>
+<p>2、优点：<br>
+左侧是开发，右侧是测试，是开发与测试并行的，相较于V模型，W模型增加了软件各开发阶段中应同步进行的验证和确认活动。有利于今早全面的发现问题<br>
+测试伴随整个软件开发周期，测试不仅是程序，还有需求，设计等验证测试</p>
+<p>3、缺点：<br>
+虽然开发和测试关系是并行的，但需求，设计，编码等活动是串行的，而测试和开发也有一定的线性前后关系，上一阶段完全结束，才可以开始下一阶段。这样无法支持迭代的开发模型，不利于当前软件开发复杂多变的情况。（没明白）</p>
+<h2 id="敏捷开发">敏捷开发</h2>
+<p>1、定义：<br>
+以人为本，适应变化</p>
+<p>2、特点：<br>
+提倡迭代式和增量式的开发模式，并强调测试在其中重要的作用<br>
+以用户为中心，以客户需求为向导的开发过程，在此过程中随时做好迎接变化的准备，客户是敏捷的关键环节<br>
+没有单一固定的开发过程，但要依赖客户参与，测试驱动，和紧凑的迭代开发周期</p>
+<h2 id="敏捷测试">敏捷测试</h2>
+<p>1、敏捷测试是协同测试的一种方式，对编程测试分饰角色，敏捷测试是连续测试。一边看一边测。<br>
+2、敏捷测试侧重单元测试和验收测试，如单元测试的过程是先设计单元测试用例，然后进行编码，之后执行测试。<br>
+3、敏捷测试强调客户参与，单元测试通过之后代码集成到代码库中，再由客户进行验收测试，验收测试结论反馈给开发人员，然后修复缺陷。</p>
+<h2 id="软件质量要求">软件质量要求</h2>
+<p>1、功能测试<br>
+2、非功能测试：<br>
+性能要求（负载测试，压力测试，容量测试，可靠性测试），界面测试，兼容性测试，易用性测试，文档测试，可用性测试，安全测试，灾备恢复测试等等</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/kEUMKYLyO/" class="tag">
+                    测试
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/yuan-su-ding-wei/">
+                  <h3 class="post-title">
+                    元素定位
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>RNN, LSTM | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="RNN：Recurrent Neural Network
+LSTM：Long-Short Term Memory
+
+RNN：
+特点：对具有序列特性的数据有效，能挖掘数据中的时序信息以及语义信息。
+（时序特性，符合时间顺序，逻辑顺序等，比如人..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">RNN, LSTM</h2>
+            <div class="post-date">2020-07-31</div>
+            
+            <div class="post-content" v-pre>
+              <p>RNN：Recurrent Neural Network<br>
+LSTM：Long-Short Term Memory</p>
+<!-- more -->
+<p>RNN：<br>
+特点：对具有序列特性的数据有效，能挖掘数据中的时序信息以及语义信息。<br>
+（时序特性，符合时间顺序，逻辑顺序等，比如人说的一句话，是几个单词按照一定的逻辑顺序拼接起来的）</p>
+<p>结构：<br>
+<img src="https://yeswhos.github.io//post-images/1596186342549.jpg" alt="" loading="lazy"><br>
+上图X （t - 1）代表一个单词的向量，其他的x也是同样的。W是每个时间点之间的权重矩阵。<br>
+这样，RNN可以记住每个时刻的信息，每个时刻的隐藏层不仅由该时刻的输入层决定，还由上一个时刻的隐藏层决定。<br>
+公式如下，Oｔ代表ｔ时刻的输出，Sｔ代表ｔ时刻的隐藏层。<br>
+<img src="https://yeswhos.github.io//post-images/1596186751673.jpg" alt="" loading="lazy"></p>
+<p>(例子可以看下面的链接)</p>
+<p>总结:RNN每一个时刻的输出结果都与上一时的输入有很大关系.<br>
+如果把输入序列换个顺序,那得到的结果也将是截然不同的.可以处理序列数据,同时对序列也很敏感.</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/ou-ji-li-de-ju-chi-zui-xiao-er-cheng-fa/">
+                  <h3 class="post-title">
+                    欧几里得距离，最小二乘法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>正则化 Regularization | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="一种解决过拟合问题的方法。
+
+前提：
+
+欠拟合：在线性回归中，图一没有很好的与数据拟合，产生很大的偏差。
+过拟合：图三，通过了所有的训练数据，但是是一条极其不规律的扭曲的曲线，并不是一个很好的模型。
+如果我们用高阶多项式，变量（特征）过多，..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">正则化 Regularization</h2>
+            <div class="post-date">2020-07-14</div>
+            
+            <div class="post-content" v-pre>
+              <p>一种解决过拟合问题的方法。</p>
+<!-- more -->
+<p>前提：<br>
+<img src="https://yeswhos.github.io//post-images/1594734206541.png" alt="" loading="lazy"><br>
+欠拟合：在线性回归中，图一没有很好的与数据拟合，产生很大的偏差。<br>
+过拟合：图三，通过了所有的训练数据，但是是一条极其不规律的扭曲的曲线，并不是一个很好的模型。<br>
+如果我们用高阶多项式，变量（特征）过多，那么这个函数能够很好的拟合训练姐，但是无法泛化到新的数据样本中，也就是拟合但泛化能力变差。<br>
+存在较多的变量，较少的训练数据，没有足够的训练集来约束变量过多的模型就会导致过拟合的现象。</p>
+<p>解决：</p>
+<ol>
+<li>减少变量的个数：舍弃掉一些变量，保留更为重要的变量。但是，如果每个特征变量都对预测产生了影响，当舍弃掉一部分变量时，也就舍弃了一些信息。所以，希望保留所有的变量</li>
+<li>正则化：保留所有的变量，将一些不重要的特征的权值置为0，或者权值变小使特征的参数矩阵变稀疏，使每个变量都对预测产生一点影响。</li>
+</ol>
+<p>正则化思路：<br>
+如果参数对应一个较小的值，那么会得到形式更加简单的假设。惩罚高阶参数，使它们趋近于0，这样就会得到较为简单的假设，也就是得到简单的函数，这样就不易发生过拟合。但是在实际问题中，并不知道哪些是高阶多项式的项，所以在代价函数中增加一个惩罚项/正则化项，将代价函数中所有参数值都最小化，收缩每一个参数。<br>
+通过参数值越小，让模型变得越简单，越能预防过拟合。<br>
+因为越复杂的模型，越是会尝试拟合所有的训练数据，包括一些异常样本，这就容易造成在较小的区间内预测值产生较大的波动，这种大的波动反映了在某些小的区间里导数值很大。而只有较大的参数值才能产生较大的导数。因此复杂的模型，其参数值会比较大。</p>
+<p>正则化的参数要做的就是控制两个目标之间的平衡关系：在最小化训练误差的同时，正则化参数使模型简单。</p>
+<ol>
+<li>最小化误差是为了更好的拟合训练数据。</li>
+<li>正则化参数是为了防止模型过分拟合训练数据。<br>
+所以正则化参数要保证模型简单的基础上使模型具有很好的泛化功能。</li>
+</ol>
+<p>正则化方法：<br>
+L_0, L_1, L_2范数。<br>
+深入的我也没明白。</p>
+<p>Reference:</p>
+<ol>
+<li>西瓜书</li>
+<li>https://blog.csdn.net/speargod/article/details/80233619</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/zui-xiao-er-cheng-fa-ou-shi-ju-chi/">
+                  <h3 class="post-title">
+                    最小二乘法，欧氏距离
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

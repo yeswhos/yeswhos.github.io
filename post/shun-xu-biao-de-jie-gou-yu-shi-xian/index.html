@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>顺序表的结构与实现 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="顺序表完整信息包括两部分，一部分是表中的元素集合，另一部分是为实现正确操作而记录的信息（表头信息），这部分主要包括元素存储区容量和当前表中已有的元素个数。
+
+
+顺序表的两种基本实现方式：
+
+一体式结构，表头信息和元素存储安排在一块存储区中，..." />
+    <meta name="keywords" content="计算机基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">顺序表的结构与实现</h2>
+            <div class="post-date">2020-07-13</div>
+            
+            <div class="post-content" v-pre>
+              <p>顺序表完整信息包括两部分，一部分是表中的元素集合，另一部分是为实现正确操作而记录的信息（表头信息），这部分主要包括元素存储区容量和当前表中已有的元素个数。</p>
+<!-- more -->
+<p><img src="https://yeswhos.github.io//post-images/1594623906096.jpg" alt="" loading="lazy"><br>
+顺序表的两种基本实现方式：<br>
+<img src="https://yeswhos.github.io//post-images/1594623961408.jpg" alt="" loading="lazy"><br>
+一体式结构，表头信息和元素存储安排在一块存储区中，两部分数据的整体形成一个完整的顺序表对象。<br>
+<img src="https://yeswhos.github.io//post-images/1594624010502.jpg" alt="" loading="lazy"><br>
+分离式结构，表对象里只保存与整个表有关的信息（表头），实际元素存储在另一个独立元素的存储区中。通过链接与基本表对象关联。<br>
+也就是表头有三个元素，容量和当前已有元素个数还有第一个已有元素的地址，从而把表头与元素存储对应上。</p>
+<p>元素存储区的替换：<br>
+对于一体式结构，整个顺序表对象都得搬。<br>
+对于分离式结构，只需将表头中链接地址更新即可，顺序表对象不变。</p>
+<p>元素存储区扩充：<br>
+分离式结构，可在不改变对象的前提下对其数据存储区进行扩充。一般这种实现为动态顺序表，因为其容量可以在使用中动态变化。<br>
+扩充两种策略：</p>
+<ol>
+<li>每次扩充增加固定数目的存储位置，如每次增加10个元素位置，称为线性增长。<br>
+特点：节省空间，但操作次数多。</li>
+<li>每次扩容加倍，每扩充增加一倍的存储空间。<br>
+特点：减少了扩充操作的执行次数，但可能会浪费空间。以空间换时间，推荐的方式。</li>
+</ol>
+<p>Reference:<br>
+https://www.bilibili.com/video/BV18W411T7Vv?p=4</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/FHfonQ63x/" class="tag">
+                    计算机基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/mo-xing-ping-gu-fang-fa/">
+                  <h3 class="post-title">
+                    模型评估方法
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

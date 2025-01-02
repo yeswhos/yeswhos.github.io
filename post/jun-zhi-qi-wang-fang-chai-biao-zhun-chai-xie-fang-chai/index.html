@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>均值，期望，方差，标准差，协方差，均方差，均方误差 | yeswhos</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://yeswhos.github.io//favicon.ico?v=1735822702431">
+<link rel="stylesheet" href="https://yeswhos.github.io//styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="基本的数学概念回顾
+
+均值：幼儿园的东西。
+期望：值乘以对应的概率
+
+方差 Variance：各个数据与期望的差的平方的平均数。
+是用来衡量随机变量或一组数据时的离散程度的度量，度量变量和其数学期望之间的偏离程度。
+
+标准差 Standar..." />
+    <meta name="keywords" content="算法/AI基础" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://yeswhos.github.io/">
+        <img src="https://yeswhos.github.io//images/avatar.png?v=1735822702431" class="site-logo">
+        <h1 class="site-title">yeswhos</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Of course, I still love you.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://yeswhos.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">均值，期望，方差，标准差，协方差，均方差，均方误差</h2>
+            <div class="post-date">2020-07-25</div>
+            
+            <div class="post-content" v-pre>
+              <p>基本的数学概念回顾</p>
+<!-- more -->
+<p>均值：幼儿园的东西。<br>
+期望：值乘以对应的概率<br>
+<img src="https://yeswhos.github.io//post-images/1595759783226.jpg" alt="" loading="lazy"><br>
+方差 Variance：各个数据与期望的差的平方的平均数。<br>
+是用来衡量随机变量或一组数据时的离散程度的度量，度量变量和其数学期望之间的偏离程度。<br>
+<img src="https://yeswhos.github.io//post-images/1595759827568.jpg" alt="" loading="lazy"><br>
+标准差 Standard Deviation：方差开平方，也成为均方差。<br>
+<img src="https://yeswhos.github.io//post-images/1595759852824.jpg" alt="" loading="lazy"><br>
+协方差：上面都是一维数据，协方差用来度量两个随机变量关系，比如标准差可以这样。<br>
+<img src="https://yeswhos.github.io//post-images/1595759960366.jpg" alt="" loading="lazy"><br>
+如果结果为正值，说明两者正相关，反之负相关。<br>
+均方误差 Mean Squared Error：各数据偏离真实值差值的平方和的平均数。也就是误差平方和的平均数。均方误差的开方为均方根误差，均方根误差才和标准差形式上接近。</p>
+<p>Reference:</p>
+<ol>
+<li>https://blog.csdn.net/gyhjlauy/article/details/92436368</li>
+<li>https://zhuanlan.zhihu.com/p/83410946</li>
+</ol>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://yeswhos.github.io/tag/pLIjiDusU/" class="tag">
+                    算法/AI基础
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://yeswhos.github.io/post/fei-bo-na-qi-shu-lie-fibonacci-sequence/">
+                  <h3 class="post-title">
+                    斐波那契数列 Fibonacci sequence
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: '',
+        owner: '',
+        admin: [''],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
